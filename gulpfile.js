@@ -3,6 +3,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const fileinclude = require('gulp-file-include');
 
 exports.run = function () {
     browserSync.init({
@@ -12,14 +13,35 @@ exports.run = function () {
     });
 
     gulp.watch(['src/styles/*.scss', 'src/styles/**/*.scss'], scss_watch);
-    gulp.watch('src/*.html').on('change', browserSync.reload);
+    gulp.watch(['src/template/*.html', 'src/template/**/*.html'], html_watch);
+    gulp.watch('src/**/*.svg').on('change', browserSync.reload);
 };
 
-exports.build = gulp.series(scss, function () {
+exports.build = gulp.series(scss, html, function () {
     return gulp
-        .src(['src/**/*.svg', 'src/*.html'])
+        .src('src/**/*.svg')
         .pipe(gulp.dest('dist/'));
 });
+
+function html() {
+    return gulp.src(['src/template/*.html', 'src/template/**/*.html'])
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('src/'))
+        .pipe(gulp.dest('dist/'));
+}
+
+function html_watch() {
+    return gulp.src(['src/template/*.html', 'src/template/**/*.html'])
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('src/'))
+        .pipe(browserSync.stream());
+}
 
 function scss() {
     return gulp
