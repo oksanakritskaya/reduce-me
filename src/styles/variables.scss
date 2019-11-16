@@ -1,0 +1,38 @@
+$font_header: 'Lobster', cursive;
+$font: 'Roboto Mono', monospace;
+
+$color_blue: #2A7DFA;
+$color_white: #F0F0F0;
+
+$icon-size: 17px;
+
+$url: '../../assets/images';
+
+@mixin font-header {
+  font: normal normal 36px/45px $font_header;
+}
+
+@mixin font-18 {
+  font: normal normal 18px/21px $font;
+}
+
+@mixin icon-item {
+  padding-left: $icon-size;
+
+  position: relative;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+
+    height: 17px;
+    width: 17px;
+
+    background-size: contain;
+  }
+}

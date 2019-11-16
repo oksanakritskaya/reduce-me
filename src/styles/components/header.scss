@@ -1,0 +1,144 @@
+@import '../variables';
+
+.header {
+  padding: 0 35px 0 15px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include font-18();
+  text-transform: uppercase;
+  color: $color_white;
+
+  background-color: $color_blue;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+h1.header__logo {
+  $size: 43px;
+  $gap: 8px;
+
+  margin-right: 135px;
+
+  @include icon-item();
+  padding-left: $size + $gap;
+
+  display: block;
+
+  @include font-header();
+  text-transform: capitalize;
+
+  &::before {
+    margin-right: $gap;
+
+    height: $size;
+    width: $size;
+
+    background-image: url('#{$url}/logo.svg');
+  }
+}
+
+.header__balance {
+  @include icon-item();
+  padding: $icon-size + 8px;
+
+  &::before {
+    background-image: url('#{$url}/balance.svg');
+  }
+}
+
+nav.header__nav {
+  margin-left: auto;
+}
+
+.header-nav {
+  display: flex;
+
+  &__item {
+    padding: 25px;
+
+    display: inline-block;
+
+    color: $color_white;
+
+    &:active, &:hover {
+      text-decoration: none;
+      color: $color_blue;
+
+      background-color: $color_white;
+
+      .header-nav__item--support {
+        &::before {
+          background-image: url('#{$url}/support-active.svg');
+        }
+      }
+
+      .header-nav__item--login {
+        &::before {
+          background-image: url('#{$url}/login-active.svg');
+        }
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+
+    &--support,
+    &--rus,
+    &--eng,
+    &--login {
+      @include icon-item();
+    }
+
+    &--support {
+      $gap: 12px;
+      padding-left: $icon-size + $gap;
+
+      &::before {
+        margin-right: $gap;
+
+        background-image: url('#{$url}/support.svg');
+      }
+    }
+
+    &--list {
+      display: flex;
+      align-items: center;
+    }
+
+    &--rus, &--eng, &--login {
+      $gap: 10px;
+      padding-left: $icon-size + $gap;
+
+      &::before {
+        margin-right: $gap;
+      }
+    }
+
+    &--rus {
+      padding-right: 15px + 15px;
+
+      &::before {
+        background-image: url('#{$url}/rus.svg');
+      }
+
+      &::after {
+        content: '|';
+
+        position: absolute;
+        top: 0;
+        right: 10px;
+      }
+    }
+
+    &--eng::before {
+      background-image: url('#{$url}/eng.svg');
+    }
+
+    &--login::before {
+      background-image: url('#{$url}/login.svg');
+    }
+  }
+}
