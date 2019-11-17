@@ -1,5 +1,6 @@
 /node_modules
 /dist
 /src/css
+/src/images/sprite.svg
 /src/index.html
 /.idea

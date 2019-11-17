@@ -7,17 +7,55 @@ $color_white: #F0F0F0;
 $icon-size: 17px;
 
 $url: '../../images';
+$url_sprite: '../../images/sprite.svg';
+
+$size-base: 16px;
+$size-xl: 15px;
+$size-l: 14px;
+$size-m: 13px;
+$size-s: 12px;
+$size-xs: 11px;
+$size-xxs: 10px;
+
+$media-xl: 1420px;
+$media-l: 1180px;
+$media-m: 1060px;
+$media-s: 960px;
+$media-xs: 880px;
+$media-xxs: 700px;
+$media-xxxs: 620px;
+
+@function calculateRem($size) {
+  @return #{$size / $size-base}rem;
+}
 
 @mixin font-header {
-  font: normal normal 36px/45px $font_header;
+  font: normal normal calculateRem(36px)/calculateRem(45px) $font_header;
 }
 
 @mixin font-18 {
-  font: normal normal 18px/21px $font;
+  font: normal normal calculateRem(18px)/calculateRem(21px) $font;
+}
+
+
+@mixin delimiter {
+  padding-right: calculateRem(15px + 15px);
+
+  position: relative;
+
+  white-space: nowrap;
+
+  &::after {
+    content: '|';
+
+    position: absolute;
+    top: 0;
+    right: calculateRem(10px);
+  }
 }
 
 @mixin icon-item {
-  padding-left: $icon-size;
+  padding-left: calculateRem($icon-size);
 
   position: relative;
 
@@ -30,8 +68,8 @@ $url: '../../images';
 
     transform: translateY(-50%);
 
-    height: 17px;
-    width: 17px;
+    height: calculateRem(17px);
+    width: calculateRem(17px);
 
     background-size: contain;
   }

@@ -1,64 +1,104 @@
 @import '../variables';
 
 .header {
-  padding: 0 35px 0 15px;
+  padding: 0 calculateRem(35px) 0 calculateRem(15px);
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
   @include font-18();
+  text-align: left;
   text-transform: uppercase;
   color: $color_white;
 
   background-color: $color_blue;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: $media-xl) {
+    padding-right: calculateRem(20px);
+  }
+
+  @media screen and (max-width: $media-l) {
+    padding-right: calculateRem(15px);
+  }
+
+  @media screen and (max-width: $media-xxxs) {
+    flex-wrap: wrap;
+  }
 }
 
-h1.header__logo {
+.header__logo {
   $size: 43px;
   $gap: 8px;
 
-  margin-right: 135px;
+  margin-right: calculateRem(135px);
 
   @include icon-item();
-  padding-left: $size + $gap;
+  padding-left: calculateRem($size + $gap);
 
   display: block;
 
   @include font-header();
   text-transform: capitalize;
+  white-space: nowrap;
+  color: $color_white;
 
   &::before {
-    margin-right: $gap;
+    margin-right: calculateRem($gap);
 
-    height: $size;
-    width: $size;
+    height: calculateRem($size);
+    width: calculateRem($size);
 
     background-image: url('#{$url}/logo.svg');
+  }
+
+  @media screen and (max-width: $media-xl) {
+    margin-right: calculateRem(60px);
+  }
+
+  @media screen and (max-width: $media-m) {
+    margin-right: calculateRem(30px);
   }
 }
 
 .header__balance {
   @include icon-item();
-  padding: $icon-size + 8px;
+  padding: calculateRem(10px) 0 calculateRem(10px) calculateRem($icon-size + 8px);
+  margin-right: calculateRem(60px);
+
+  flex-shrink: 3;
 
   &::before {
-    background-image: url('#{$url}/balance.svg');
+    background-image: url('#{$url_sprite}#balance');
+  }
+
+  @media screen and (max-width: $media-m) {
+    margin-right: calculateRem(30px);
   }
 }
 
-nav.header__nav {
+.header__nav {
   margin-left: auto;
+
+  flex-shrink: 0;
+  align-self: stretch;
+
+  @media screen and (max-width: $media-xxxs) {
+    margin-left: 0;
+    flex-shrink: 1;
+  }
 }
 
 .header-nav {
   display: flex;
+  align-items: stretch;
 
   &__item {
-    padding: 25px;
+    padding: calculateRem(25px);
 
-    display: inline-block;
+    display: flex;
+    align-items: center;
 
     color: $color_white;
 
@@ -70,19 +110,23 @@ nav.header__nav {
 
       .header-nav__item--support {
         &::before {
-          background-image: url('#{$url}/support-active.svg');
+          background-image: url('#{$url_sprite}#support-active');
         }
       }
 
       .header-nav__item--login {
         &::before {
-          background-image: url('#{$url}/login-active.svg');
+          background-image: url('#{$url_sprite}#login-active');
         }
       }
     }
 
     a {
       color: inherit;
+    }
+
+    span {
+      display: inline-block;
     }
 
     &--support,
@@ -94,12 +138,12 @@ nav.header__nav {
 
     &--support {
       $gap: 12px;
-      padding-left: $icon-size + $gap;
+      padding-left: calculateRem($icon-size + $gap);
 
       &::before {
         margin-right: $gap;
 
-        background-image: url('#{$url}/support.svg');
+        background-image: url('#{$url_sprite}#support');
       }
     }
 
@@ -110,35 +154,31 @@ nav.header__nav {
 
     &--rus, &--eng, &--login {
       $gap: 10px;
-      padding-left: $icon-size + $gap;
+      padding-left: calculateRem($icon-size + $gap);
 
       &::before {
         margin-right: $gap;
       }
     }
 
-    &--rus {
-      padding-right: 15px + 15px;
-
-      &::before {
-        background-image: url('#{$url}/rus.svg');
-      }
-
-      &::after {
-        content: '|';
-
-        position: absolute;
-        top: 0;
-        right: 10px;
-      }
+    &--rus::before {
+      background-image: url('#{$url}/sprite.svg#rus');
     }
 
     &--eng::before {
-      background-image: url('#{$url}/eng.svg');
+      background-image: url('#{$url}/sprite.svg#eng');
     }
 
     &--login::before {
-      background-image: url('#{$url}/login.svg');
+      background-image: url('#{$url_sprite}#login');
+    }
+
+    @media screen and (max-width: $media-l) {
+      padding: calculateRem(20px);
+    }
+
+    @media screen and (max-width: $media-xs) {
+      padding: calculateRem(15px);
     }
   }
 }

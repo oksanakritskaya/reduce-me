@@ -1,5 +1,32 @@
 @import 'variables';
 
+html {
+  font-size: $size-base;
+  @media screen and (max-width: $media-xl) {
+    font-size: $size-xl;
+  }
+
+  @media screen and (max-width: $media-l) {
+    font-size: $size-l;
+  }
+
+  @media screen and (max-width: $media-m) {
+    font-size: $size-m;
+  }
+
+  @media screen and (max-width: $media-s) {
+    font-size: $size-s;
+  }
+
+  @media screen and (max-width: $media-xs) {
+    font-size: $size-xs;
+  }
+
+  @media screen and (max-width: $media-xxs) {
+    font-size: $size-xxs;
+  }
+}
+
 b {
   font-weight: bold;
 }
@@ -11,8 +38,13 @@ svg {
 a {
   text-decoration: none;
   color: $color_blue;
+  border-bottom: 1px solid transparent;
 
   &:active, &:hover {
-    text-decoration: underline;
+    border-color: $color_blue;
   }
+}
+
+.delimiter {
+  @include delimiter();
 }
