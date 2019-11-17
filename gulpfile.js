@@ -67,7 +67,7 @@ function svg() {
 }
 
 function html() {
-    return gulp.src(['src/template/*.html', 'src/template/**/*.html'])
+    return gulp.src(['src/template/*.html'])
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
