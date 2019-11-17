@@ -28,7 +28,7 @@
   }
 }
 
-h1.header__logo {
+.header__logo {
   $size: 43px;
   $gap: 8px;
 
@@ -42,6 +42,7 @@ h1.header__logo {
   @include font-header();
   text-transform: capitalize;
   white-space: nowrap;
+  color: $color_white;
 
   &::before {
     margin-right: calculateRem($gap);
@@ -77,7 +78,7 @@ h1.header__logo {
   }
 }
 
-nav.header__nav {
+.header__nav {
   margin-left: auto;
 
   flex-shrink: 0;
@@ -160,12 +161,8 @@ nav.header__nav {
       }
     }
 
-    &--rus {
-      @include delimiter();
-
-      &::before {
-        background-image: url('#{$url}/sprite.svg#rus');
-      }
+    &--rus::before {
+      background-image: url('#{$url}/sprite.svg#rus');
     }
 
     &--eng::before {
