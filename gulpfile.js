@@ -9,6 +9,10 @@ sass.compiler = require('node-sass');
 const fileinclude = require('gulp-file-include');
 
 exports.run = function () {
+    css();
+    svg();
+    html();
+
     browserSync.init({
         server: {
             baseDir: 'src/'
