@@ -23,7 +23,7 @@ exports.build = function () {
     const css_ouput = streamqueue({objectMode: true},
         css,
         gulp.src(['src/css/*.css', 'src/css/**/*.css']))
-        .pipe(gulp.dest('dist/styles'));
+        .pipe(gulp.dest('dist/css'));
 
     const svg_ouput = streamqueue({objectMode: true},
         svg,
