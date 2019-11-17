@@ -161,6 +161,14 @@
       }
     }
 
+    &--rus, &--eng {
+      border-bottom: 1px solid transparent;
+
+      &:active, &:hover {
+        border-color: $color_blue;
+      }
+    }
+
     &--rus::before {
       background-image: url('#{$url}/sprite.svg#rus');
     }
