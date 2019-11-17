@@ -44,7 +44,7 @@ h1.header__logo {
   padding: $icon-size + 8px;
 
   &::before {
-    background-image: url('#{$url}/balance.svg');
+    background-image: url('#{$url_sprite}#balance');
   }
 }
 
@@ -70,13 +70,13 @@ nav.header__nav {
 
       .header-nav__item--support {
         &::before {
-          background-image: url('#{$url}/support-active.svg');
+          background-image: url('#{$url_sprite}#support-active');
         }
       }
 
       .header-nav__item--login {
         &::before {
-          background-image: url('#{$url}/login-active.svg');
+          background-image: url('#{$url_sprite}#login-active');
         }
       }
     }
@@ -99,7 +99,7 @@ nav.header__nav {
       &::before {
         margin-right: $gap;
 
-        background-image: url('#{$url}/support.svg');
+        background-image: url('#{$url_sprite}#support');
       }
     }
 
@@ -118,27 +118,19 @@ nav.header__nav {
     }
 
     &--rus {
-      padding-right: 15px + 15px;
+      @include delimiter();
 
       &::before {
-        background-image: url('#{$url}/rus.svg');
-      }
-
-      &::after {
-        content: '|';
-
-        position: absolute;
-        top: 0;
-        right: 10px;
+        background-image: url('#{$url}/sprite.svg#rus');
       }
     }
 
     &--eng::before {
-      background-image: url('#{$url}/eng.svg');
+      background-image: url('#{$url}/sprite.svg#eng');
     }
 
     &--login::before {
-      background-image: url('#{$url}/login.svg');
+      background-image: url('#{$url_sprite}#login');
     }
   }
 }

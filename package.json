@@ -9,7 +9,10 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.0"
+    "gulp-svg-sprite": "^1.5.0",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^4.13.0",
+    "streamqueue": "^1.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
