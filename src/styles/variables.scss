@@ -26,10 +26,11 @@ $media-m: 1115px;
 $media-s: 990px;
 $media-xs: 900px;
 $media-xxs: 800px;
-$media-xxxs: 620px;
 
 $media-icons-xl: 740px;
-//$media-icons-xl: 740px;
+$media-icons-l: 630px;
+$media-icons-m: 540px;
+$media-icons-s: 460px;
 
 @function r($size) {
   @return #{$size / $size-base}rem;

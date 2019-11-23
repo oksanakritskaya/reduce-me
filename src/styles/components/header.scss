@@ -47,36 +47,26 @@
     @media screen and (max-width: $media-l) {
       padding-right: r(15px);
     }
-
-    @media screen and (max-width: $media-xxxs) {
-      flex-wrap: wrap;
-    }
   }
 
-  &__logo {
-    $size: 43px;
-    $gap: 8px;
+  &__nav {
+    margin-left: auto;
 
+    flex-shrink: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.header-item {
+  $gap: 10px;
+
+  display: flex;
+  align-items: center;
+
+  &--logo {
     margin-right: r(135px);
-
-    @include icon-item();
-    padding: r(10px) 0 r(10px) r($size + $gap);
-
-    display: block;
-
-    @include font-36();
-    text-transform: capitalize;
-    white-space: nowrap;
-    color: $color_white;
-
-    &::before {
-      margin-right: r($gap);
-
-      height: r($size);
-      width: r($size);
-
-      background-image: url('#{$url}/logo.svg');
-    }
 
     @media screen and (max-width: $media-xl) {
       margin-right: r(60px);
@@ -87,134 +77,79 @@
     }
   }
 
-  &__balance {
-    @include icon-item();
-    padding: r(10px) 0 r(10px) r($icon-size + 8px);
+  &__logo {
+    height: r(43px);
+    width: r(43px);
+  }
+
+  &__name {
+    margin-left: r(8px);
+
+    @include font-36();
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: $color_white;
+
+    @media screen and (max-width: $media-icons-s) {
+      display: none;
+    }
+  }
+
+  &--balance {
+    padding: r(10px) 0 r(10px);
     margin-right: r(60px);
 
     flex-shrink: 3;
-
-    &::before {
-      background-image: url('#{$url_sprite}#balance');
-    }
 
     @media screen and (max-width: $media-m) {
       margin-right: r(30px);
     }
   }
 
-  &__nav {
-    margin-left: auto;
+  &__icon {
+    width: r($icon-size);
+    height: r($icon-size);
+  }
 
-    flex-shrink: 0;
-    align-self: stretch;
+  &__label {
+    margin-left: r($gap);
 
-    @media screen and (max-width: $media-xxxs) {
-      margin-left: 0;
-      flex-shrink: 1;
+    display: inline-block;
+
+    @media screen and (max-width: $media-icons-xl) {
+      display: none;
     }
   }
 
-  &__nav-toggle {
-
+  &__value {
+    margin-left: r($gap);
   }
 }
 
-.header-nav {
-  display: flex;
-  align-items: stretch;
 
-  &__item {
-    padding: r(25px);
+.header-nav-item {
+  padding: r(25px);
 
+  @include with-hover();
+
+  &--list {
     display: flex;
     align-items: center;
+  }
 
-    @include with-hover();
+  a {
+    color: inherit;
+  }
 
-    &:active, &:hover {
-      .header-nav__item--support {
-        &::before {
-          background-image: url('#{$url_sprite}#support-active');
-        }
-      }
+  @media screen and (max-width: $media-l) {
+    padding: r(20px);
+  }
 
-      .header-nav__item--login {
-        &::before {
-          background-image: url('#{$url_sprite}#login-active');
-        }
-      }
-    }
-
-    a {
-      color: inherit;
-    }
-
-    span {
-      display: inline-block;
-    }
-
-    &--support,
-    &--rus,
-    &--eng,
-    &--login {
-      @include icon-item();
-    }
-
-    &--support {
-      $gap: 12px;
-      padding-left: r($icon-size + $gap);
-
-      &::before {
-        margin-right: $gap;
-
-        background-image: url('#{$url_sprite}#support');
-      }
-    }
-
-    &--list {
-      display: flex;
-      align-items: center;
-    }
-
-    &--rus, &--eng, &--login {
-      $gap: 10px;
-      padding-left: r($icon-size + $gap);
-
-      &::before {
-        margin-right: $gap;
-      }
-    }
-
-    &--rus, &--eng {
-      border-bottom: 1px solid transparent;
-
-      &:active, &:hover {
-        border-color: $color_blue;
-      }
-    }
-
-    &--rus::before {
-      background-image: url('#{$url}/sprite.svg#rus');
-    }
-
-    &--eng::before {
-      background-image: url('#{$url}/sprite.svg#eng');
-    }
-
-    &--login::before {
-      background-image: url('#{$url_sprite}#login');
-    }
-
-    @media screen and (max-width: $media-l) {
-      padding: r(20px);
-    }
-
-    @media screen and (max-width: $media-xs) {
-      padding: r(15px);
-    }
+  @media screen and (max-width: $media-xs) {
+    padding: r(15px);
   }
 }
+
 
 .nav-toggle {
   cursor: pointer;

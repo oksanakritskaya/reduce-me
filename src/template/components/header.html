@@ -3,21 +3,45 @@
         <a class="nav-toggle" href="#"><span></span></a>
     </div>
     <div class="header__content">
-        <a href="#" class="header__logo">Reduce Me</a>
-        <p class="header__balance">
-            <b>Баланс: </b>
-            <span class="delimiter">1000 <b>rub</b></span>1000 <b>usd</b>
-        </p>
-        <nav class="header__nav header-nav">
-            <a href="#" class="header-nav__item">
-                <span class="header-nav__item--support">Служба поддержки</span>
-            </a>
-            <p class="header-nav__item">
-                <span class="delimiter"><a href="#" class="header-nav__item--rus">Рус</a></span>
-                <a href="#" class="header-nav__item--eng">Eng</a>
+        <a href="#" class="header-item header-item--logo">
+            <img src="images/logo.svg" alt="logo" class="header-item__logo">
+            <span class="header-item__name">Reduce Me</span>
+        </a>
+        <div class="header-item header--item--balance">
+            <svg class="header-item__icon">
+                <use xlink:href="images/sprite.svg#balance"></use>
+            </svg>
+            <b class="header-item__label">Баланс: </b>
+            <p class="header-item__value">
+                <span class="delimiter">1000 <b>rub</b></span>1000 <b>usd</b>
             </p>
-            <a href="#" class="header-nav__item">
-                <span class="header-nav__item--login">Выход</span>
+        </div>
+        <nav class="header__nav">
+            <a href="#" class="header-item header-nav-item">
+                <svg class="header-item__icon">
+                    <use xlink:href="images/sprite.svg#support"></use>
+                </svg>
+                <span class="header-item__label">Служба поддержки</span>
+            </a>
+            <div class="header-nav-item header-nav-item--list">
+                <a href="#" class="header-item delimiter">
+                    <svg class="header-item__icon">
+                        <use xlink:href="images/sprite.svg#rus"></use>
+                    </svg>
+                    <span class="header-item__label">Рус</span>
+                </a>
+                <a href="#" class="header-item">
+                    <svg class="header-item__icon">
+                        <use xlink:href="images/sprite.svg#eng"></use>
+                    </svg>
+                    <span class="header-item__label">Eng</span>
+                </a>
+            </div>
+            <a href="#" class="header-item header-nav-item">
+                <svg class="header-item__icon">
+                    <use xlink:href="images/sprite.svg#login"></use>
+                </svg>
+                <span class="header-item__label">Выход</span>
             </a>
         </nav>
     </div>

@@ -20,10 +20,9 @@ exports.run = function () {
         }
     });
 
-    gulp.watch(['src/styles/*.scss', 'src/styles/**/*.scss'], css);
+    gulp.watch(['src/styles/*.scss', 'src/styles/**/*.scss'], gulp.series(css, browserSync.reload));
     gulp.watch('src/images/icons/*.svg', svg);
-    gulp.watch('src/template/*.html', html);
-    gulp.watch('src/template/**/*.html', html_components);
+    gulp.watch(['src/template/*.html', 'src/template/**/*.html'], gulp.parallel(html, html_components));
     gulp.watch('src/*.html').on('change', browserSync.reload);
 };
 
