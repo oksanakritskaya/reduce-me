@@ -20,13 +20,16 @@ $size-s: 12px;
 $size-xs: 11px;
 $size-xxs: 10px;
 
-$media-xl: 1420px;
-$media-l: 1180px;
-$media-m: 1060px;
-$media-s: 960px;
-$media-xs: 880px;
-$media-xxs: 700px;
+$media-xl: 1470px;
+$media-l: 1220px;
+$media-m: 1115px;
+$media-s: 990px;
+$media-xs: 900px;
+$media-xxs: 800px;
 $media-xxxs: 620px;
+
+$media-icons-xl: 740px;
+//$media-icons-xl: 740px;
 
 @function r($size) {
   @return #{$size / $size-base}rem;

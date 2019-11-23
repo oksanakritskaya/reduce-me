@@ -36,13 +36,13 @@ body {
 }
 
 .main-container {
-  padding: 70px 0 0 $nav-width;
+  padding: r($header-height) 0 0 r($nav-width);
 
   width: 100%;
 }
 
 .main-container--opened {
-  padding-left: $nav-width--opened;
+  padding-left: r($nav-width--opened);
 }
 
 b {

@@ -8,7 +8,7 @@
   right: 0;
 
   width: 100%;
-  height: $header-height;
+  height: r($header-height);
 
   display: flex;
   align-items: center;
@@ -21,8 +21,9 @@
   background-color: $color_blue;
 
   &__nav-toggle {
-    width: $nav-width;
+    width: r($nav-width);
 
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
   }
@@ -59,7 +60,7 @@
     margin-right: r(135px);
 
     @include icon-item();
-    padding-left: r($size + $gap);
+    padding: r(10px) 0 r(10px) r($size + $gap);
 
     display: block;
 
@@ -217,13 +218,13 @@
 
 .nav-toggle {
   cursor: pointer;
-  padding: 10px 35px 16px 0;
+  padding: r(10px) r(35px) r(16px) 0;
 
   span,
   span::before,
   span::after {
-    height: 3px;
-    width: 30px;
+    height: r(3px);
+    width: r(30px);
     background: $color_white;
     position: absolute;
     display: block;
@@ -233,11 +234,11 @@
   }
 
   span::before {
-    top: -10px;
+    top: r(-10px);
   }
 
   span::after {
-    bottom: -10px;
+    bottom: r(-10px);
   }
 
   &.active {
