@@ -27,6 +27,24 @@ html {
   }
 }
 
+body, main {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+}
+
+.main-container {
+  padding: 70px 0 0 $nav-width;
+
+  width: 100%;
+}
+
+.main-container--opened {
+  padding-left: $nav-width--opened;
+}
+
 b {
   font-weight: bold;
 }
@@ -38,6 +56,10 @@ svg {
 a {
   text-decoration: none;
   color: $color_blue;
+}
+
+main {
+  display: flex;
 }
 
 .delimiter {

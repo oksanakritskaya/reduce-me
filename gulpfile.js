@@ -33,7 +33,7 @@ exports.build = function () {
 
     const svg_ouput = streamqueue({objectMode: true},
         svg,
-        gulp.src('src/images/*.svg'))
+        gulp.src('src/images/*.*'))
         .pipe(gulp.dest('dist/images'));
 
     return merge(

@@ -1,10 +1,16 @@
 @import '../variables';
 
 .header {
-  padding: 0 calculateRem(35px) 0 calculateRem(15px);
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: $header-height;
 
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 
   @include font-18();
@@ -13,80 +19,103 @@
   color: $color_white;
 
   background-color: $color_blue;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
-  @media screen and (max-width: $media-xl) {
-    padding-right: calculateRem(20px);
+  &__nav-toggle {
+    width: $nav-width;
+
+    display: flex;
+    justify-content: center;
   }
 
-  @media screen and (max-width: $media-l) {
-    padding-right: calculateRem(15px);
+  &__content {
+    padding: 0 r(35px) 0 r(15px);
+
+    flex-grow: 1;
+    align-self: stretch;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+    @media screen and (max-width: $media-xl) {
+      padding-right: r(20px);
+    }
+
+    @media screen and (max-width: $media-l) {
+      padding-right: r(15px);
+    }
+
+    @media screen and (max-width: $media-xxxs) {
+      flex-wrap: wrap;
+    }
   }
 
-  @media screen and (max-width: $media-xxxs) {
-    flex-wrap: wrap;
-  }
-}
+  &__logo {
+    $size: 43px;
+    $gap: 8px;
 
-.header__logo {
-  $size: 43px;
-  $gap: 8px;
+    margin-right: r(135px);
 
-  margin-right: calculateRem(135px);
+    @include icon-item();
+    padding-left: r($size + $gap);
 
-  @include icon-item();
-  padding-left: calculateRem($size + $gap);
+    display: block;
 
-  display: block;
+    @include font-36();
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: $color_white;
 
-  @include font-header();
-  text-transform: capitalize;
-  white-space: nowrap;
-  color: $color_white;
+    &::before {
+      margin-right: r($gap);
 
-  &::before {
-    margin-right: calculateRem($gap);
+      height: r($size);
+      width: r($size);
 
-    height: calculateRem($size);
-    width: calculateRem($size);
+      background-image: url('#{$url}/logo.svg');
+    }
 
-    background-image: url('#{$url}/logo.svg');
-  }
+    @media screen and (max-width: $media-xl) {
+      margin-right: r(60px);
+    }
 
-  @media screen and (max-width: $media-xl) {
-    margin-right: calculateRem(60px);
-  }
-
-  @media screen and (max-width: $media-m) {
-    margin-right: calculateRem(30px);
-  }
-}
-
-.header__balance {
-  @include icon-item();
-  padding: calculateRem(10px) 0 calculateRem(10px) calculateRem($icon-size + 8px);
-  margin-right: calculateRem(60px);
-
-  flex-shrink: 3;
-
-  &::before {
-    background-image: url('#{$url_sprite}#balance');
+    @media screen and (max-width: $media-m) {
+      margin-right: r(30px);
+    }
   }
 
-  @media screen and (max-width: $media-m) {
-    margin-right: calculateRem(30px);
+  &__balance {
+    @include icon-item();
+    padding: r(10px) 0 r(10px) r($icon-size + 8px);
+    margin-right: r(60px);
+
+    flex-shrink: 3;
+
+    &::before {
+      background-image: url('#{$url_sprite}#balance');
+    }
+
+    @media screen and (max-width: $media-m) {
+      margin-right: r(30px);
+    }
   }
-}
 
-.header__nav {
-  margin-left: auto;
+  &__nav {
+    margin-left: auto;
 
-  flex-shrink: 0;
-  align-self: stretch;
+    flex-shrink: 0;
+    align-self: stretch;
 
-  @media screen and (max-width: $media-xxxs) {
-    margin-left: 0;
-    flex-shrink: 1;
+    @media screen and (max-width: $media-xxxs) {
+      margin-left: 0;
+      flex-shrink: 1;
+    }
+  }
+
+  &__nav-toggle {
+
   }
 }
 
@@ -95,19 +124,14 @@
   align-items: stretch;
 
   &__item {
-    padding: calculateRem(25px);
+    padding: r(25px);
 
     display: flex;
     align-items: center;
 
-    color: $color_white;
+    @include with-hover();
 
     &:active, &:hover {
-      text-decoration: none;
-      color: $color_blue;
-
-      background-color: $color_white;
-
       .header-nav__item--support {
         &::before {
           background-image: url('#{$url_sprite}#support-active');
@@ -138,7 +162,7 @@
 
     &--support {
       $gap: 12px;
-      padding-left: calculateRem($icon-size + $gap);
+      padding-left: r($icon-size + $gap);
 
       &::before {
         margin-right: $gap;
@@ -154,7 +178,7 @@
 
     &--rus, &--eng, &--login {
       $gap: 10px;
-      padding-left: calculateRem($icon-size + $gap);
+      padding-left: r($icon-size + $gap);
 
       &::before {
         margin-right: $gap;
@@ -182,11 +206,57 @@
     }
 
     @media screen and (max-width: $media-l) {
-      padding: calculateRem(20px);
+      padding: r(20px);
     }
 
     @media screen and (max-width: $media-xs) {
-      padding: calculateRem(15px);
+      padding: r(15px);
     }
   }
+}
+
+.nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0;
+
+  span,
+  span::before,
+  span::after {
+    height: 3px;
+    width: 30px;
+    background: $color_white;
+    position: absolute;
+    display: block;
+    content: '';
+
+    transition: all 500ms ease-in-out;
+  }
+
+  span::before {
+    top: -10px;
+  }
+
+  span::after {
+    bottom: -10px;
+  }
+
+  &.active {
+    span {
+      background-color: transparent;
+    }
+
+    span::before,
+    span::after {
+      top: 0;
+    }
+
+    span::before {
+      transform: rotate(45deg);
+    }
+
+    span::after {
+      transform: rotate(-45deg);
+    }
+  }
+
 }

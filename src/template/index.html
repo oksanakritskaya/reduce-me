@@ -2,4 +2,24 @@
 
     @@include('components/header.html')
 
+<main class="main-container">
+    @@include('components/side-nav.html')
+
+    <div style="height: 100vh;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid facilis nam necessitatibus odit unde! Architecto assumenda deserunt eligendi, eum id impedit, incidunt ipsa qui, quibusdam repellat sint temporibus ut voluptates.
+    </div>
+</main>
+
 @@include('layout/finish.html')
+
+
+<script>
+    const burger = document.body.querySelector('.nav-toggle');
+
+    burger.addEventListener('click', function () {
+        burger.classList.toggle('active');
+
+        const main = document.body.querySelector('.main-container');
+        main.classList.toggle('main-container--opened');
+    });
+</script>
