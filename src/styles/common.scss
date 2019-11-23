@@ -43,6 +43,10 @@ body {
 
 .main-container--opened {
   padding-left: r($nav-width--opened);
+
+  @media screen and (max-width: $media-icons-l) {
+    padding-left: r($nav-width);
+  }
 }
 
 b {
