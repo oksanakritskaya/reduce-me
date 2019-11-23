@@ -49,6 +49,16 @@ body {
   }
 }
 
+.main-content {
+  padding: r(50px) r(60px) r(20px);
+
+  width: 100%;
+
+  @media screen and (max-width: $media-m) {
+    padding: r(30px) r(30px) r(20px);
+  }
+}
+
 b {
   font-weight: bold;
 }
@@ -68,4 +78,50 @@ main {
 
 .delimiter {
   @include delimiter();
+}
+
+.display-flex {
+  display: flex;
+}
+
+.user-login {
+  @include font-24;
+  @include font-medium();
+
+  &--vip {
+    $size: 36px;
+    $gap: 20px;
+
+    padding-right: r($size + $gap);
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      right: 0;
+      width: r($size);
+      height: r($size);
+
+      background-color: $color_white;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+      border-radius: r(4px);
+    }
+
+    &:after {
+      right: r(($size - 24px) / 2);
+
+      width: r(24px);
+      height: r(24px);
+
+      background-image: url('#{$url}/vip.png');
+      background-size: contain;
+    }
+  }
 }

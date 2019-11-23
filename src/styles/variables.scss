@@ -1,7 +1,12 @@
 $font_header: 'Lobster', cursive;
 $font: 'Roboto Mono', monospace;
 
+$color_black: #000000;
 $color_blue: #2A7DFA;
+$color_blue--light: #75ABFC;
+$color_grey: #E5E5E5;
+$color_grey-light: #8E8E8E;
+$color-red: #DE0000;
 $color_white: #F0F0F0;
 
 $icon-size: 17px;
@@ -40,8 +45,16 @@ $media-icons-s: 460px;
   font-weight: 500;
 }
 
+@mixin font-bold {
+  font-weight: 700;
+}
+
 @mixin font-36 {
   font: normal normal r(36px)/r(45px) $font_header;
+}
+
+@mixin font-28 {
+  font: normal 300 r(28px)/r(33px) $font;
 }
 
 @mixin font-24 {
@@ -84,8 +97,8 @@ $media-icons-s: 460px;
   }
 }
 
-@mixin icon-item {
-  padding-left: r($icon-size);
+@mixin icon-item($size, $gap) {
+  padding-left: r($size + $gap);
 
   position: relative;
 
@@ -98,8 +111,8 @@ $media-icons-s: 460px;
 
     transform: translateY(-50%);
 
-    height: r(17px);
-    width: r(17px);
+    height: r($size);
+    width: r($size);
 
     background-size: contain;
   }

@@ -1,0 +1,47 @@
+@import "../variables";
+
+.info-item {
+  padding: r(23px) r(25px) r(23px) r(17px);
+
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  background-color: $color_white;
+  box-shadow: 0 0 r(4px) rgba(0, 0, 0, 0.25);
+  border-radius: r(4px) r(4px) 0 0;
+
+  .user-login {
+    color: $color_blue;
+  }
+
+  &__label {
+    margin-right: r(10px);
+    padding: r(10px) 0;
+
+    &--wm, &--qiwi, &--ym {
+      @include icon-item(40px, 10px);
+    }
+
+    &--wm:before {
+      background-image: url('#{$url}/wm.png');
+    }
+
+    &--qiwi:before {
+      background-image: url('#{$url}/qiwi.png');
+    }
+
+    &--ym:before {
+      background-image: url('#{$url}/ym.png');
+    }
+  }
+
+  &__input {
+    margin-right: r(20px);
+
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
