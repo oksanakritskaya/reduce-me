@@ -1,10 +1,16 @@
 @import '../variables';
 
 .header {
-  padding: 0 calculateRem(35px) 0 calculateRem(15px);
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: r($header-height);
 
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 
   @include font-18();
@@ -13,180 +19,180 @@
   color: $color_white;
 
   background-color: $color_blue;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
-  @media screen and (max-width: $media-xl) {
-    padding-right: calculateRem(20px);
+  &__nav-toggle {
+    width: r($nav-width);
+
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
   }
 
-  @media screen and (max-width: $media-l) {
-    padding-right: calculateRem(15px);
-  }
+  &__content {
+    padding: 0 r(35px) 0 r(15px);
 
-  @media screen and (max-width: $media-xxxs) {
-    flex-wrap: wrap;
-  }
-}
-
-.header__logo {
-  $size: 43px;
-  $gap: 8px;
-
-  margin-right: calculateRem(135px);
-
-  @include icon-item();
-  padding-left: calculateRem($size + $gap);
-
-  display: block;
-
-  @include font-header();
-  text-transform: capitalize;
-  white-space: nowrap;
-  color: $color_white;
-
-  &::before {
-    margin-right: calculateRem($gap);
-
-    height: calculateRem($size);
-    width: calculateRem($size);
-
-    background-image: url('#{$url}/logo.svg');
-  }
-
-  @media screen and (max-width: $media-xl) {
-    margin-right: calculateRem(60px);
-  }
-
-  @media screen and (max-width: $media-m) {
-    margin-right: calculateRem(30px);
-  }
-}
-
-.header__balance {
-  @include icon-item();
-  padding: calculateRem(10px) 0 calculateRem(10px) calculateRem($icon-size + 8px);
-  margin-right: calculateRem(60px);
-
-  flex-shrink: 3;
-
-  &::before {
-    background-image: url('#{$url_sprite}#balance');
-  }
-
-  @media screen and (max-width: $media-m) {
-    margin-right: calculateRem(30px);
-  }
-}
-
-.header__nav {
-  margin-left: auto;
-
-  flex-shrink: 0;
-  align-self: stretch;
-
-  @media screen and (max-width: $media-xxxs) {
-    margin-left: 0;
-    flex-shrink: 1;
-  }
-}
-
-.header-nav {
-  display: flex;
-  align-items: stretch;
-
-  &__item {
-    padding: calculateRem(25px);
+    flex-grow: 1;
+    align-self: stretch;
 
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 
-    color: $color_white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
-    &:active, &:hover {
-      text-decoration: none;
-      color: $color_blue;
-
-      background-color: $color_white;
-
-      .header-nav__item--support {
-        &::before {
-          background-image: url('#{$url_sprite}#support-active');
-        }
-      }
-
-      .header-nav__item--login {
-        &::before {
-          background-image: url('#{$url_sprite}#login-active');
-        }
-      }
-    }
-
-    a {
-      color: inherit;
-    }
-
-    span {
-      display: inline-block;
-    }
-
-    &--support,
-    &--rus,
-    &--eng,
-    &--login {
-      @include icon-item();
-    }
-
-    &--support {
-      $gap: 12px;
-      padding-left: calculateRem($icon-size + $gap);
-
-      &::before {
-        margin-right: $gap;
-
-        background-image: url('#{$url_sprite}#support');
-      }
-    }
-
-    &--list {
-      display: flex;
-      align-items: center;
-    }
-
-    &--rus, &--eng, &--login {
-      $gap: 10px;
-      padding-left: calculateRem($icon-size + $gap);
-
-      &::before {
-        margin-right: $gap;
-      }
-    }
-
-    &--rus, &--eng {
-      border-bottom: 1px solid transparent;
-
-      &:active, &:hover {
-        border-color: $color_blue;
-      }
-    }
-
-    &--rus::before {
-      background-image: url('#{$url}/sprite.svg#rus');
-    }
-
-    &--eng::before {
-      background-image: url('#{$url}/sprite.svg#eng');
-    }
-
-    &--login::before {
-      background-image: url('#{$url_sprite}#login');
+    @media screen and (max-width: $media-xl) {
+      padding-right: r(20px);
     }
 
     @media screen and (max-width: $media-l) {
-      padding: calculateRem(20px);
-    }
-
-    @media screen and (max-width: $media-xs) {
-      padding: calculateRem(15px);
+      padding-right: r(15px);
     }
   }
+
+  &__nav {
+    margin-left: auto;
+
+    flex-shrink: 0;
+    align-self: stretch;
+    display: flex;
+    align-items: stretch;
+  }
+}
+
+.header-item {
+  $gap: 10px;
+
+  display: flex;
+  align-items: center;
+
+  &--logo {
+    margin-right: r(135px);
+
+    @media screen and (max-width: $media-xl) {
+      margin-right: r(60px);
+    }
+
+    @media screen and (max-width: $media-m) {
+      margin-right: r(30px);
+    }
+  }
+
+  &__logo {
+    height: r(43px);
+    width: r(43px);
+  }
+
+  &__name {
+    margin-left: r(8px);
+
+    @include font-36();
+    text-transform: capitalize;
+    white-space: nowrap;
+    color: $color_white;
+
+    @media screen and (max-width: $media-icons-s) {
+      display: none;
+    }
+  }
+
+  &--balance {
+    padding: r(10px) 0 r(10px);
+    margin-right: r(60px);
+
+    flex-shrink: 3;
+
+    @media screen and (max-width: $media-m) {
+      margin-right: r(30px);
+    }
+  }
+
+  &__icon {
+    width: r($icon-size);
+    height: r($icon-size);
+  }
+
+  &__label {
+    margin-left: r($gap);
+
+    display: inline-block;
+
+    @media screen and (max-width: $media-icons-xl) {
+      display: none;
+    }
+  }
+
+  &__value {
+    margin-left: r($gap);
+  }
+}
+
+
+.header-nav-item {
+  padding: r(25px);
+
+  @include with-hover();
+
+  &--list {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  @media screen and (max-width: $media-l) {
+    padding: r(20px);
+  }
+
+  @media screen and (max-width: $media-xs) {
+    padding: r(15px);
+  }
+}
+
+
+.nav-toggle {
+  cursor: pointer;
+  padding: r(10px) r(35px) r(16px) 0;
+
+  span,
+  span::before,
+  span::after {
+    height: r(3px);
+    width: r(30px);
+    background: $color_white;
+    position: absolute;
+    display: block;
+    content: '';
+
+    transition: all 500ms ease-in-out;
+  }
+
+  span::before {
+    top: r(-10px);
+  }
+
+  span::after {
+    bottom: r(-10px);
+  }
+
+  &.active {
+    span {
+      background-color: transparent;
+    }
+
+    span::before,
+    span::after {
+      top: 0;
+    }
+
+    span::before {
+      transform: rotate(45deg);
+    }
+
+    span::after {
+      transform: rotate(-45deg);
+    }
+  }
+
 }

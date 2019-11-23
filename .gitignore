@@ -2,4 +2,6 @@
 /dist
 /src/css
 /src/images/sprite.svg
+/src/components
+/src/*.html
 /.idea
