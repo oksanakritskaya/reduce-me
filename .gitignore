@@ -3,5 +3,7 @@
 /src/css
 /src/images/sprite.svg
 /src/components
+/src/_layout
+/src/pages
 /src/*.html
 /.idea
