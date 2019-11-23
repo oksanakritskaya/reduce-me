@@ -12,6 +12,7 @@ exports.run = function () {
     css();
     svg();
     html();
+    html_components();
 
     browserSync.init({
         server: {
@@ -21,7 +22,8 @@ exports.run = function () {
 
     gulp.watch(['src/styles/*.scss', 'src/styles/**/*.scss'], css);
     gulp.watch('src/images/icons/*.svg', svg);
-    gulp.watch(['src/template/*.html', 'src/template/**/*.html'], html);
+    gulp.watch('src/template/*.html', html);
+    gulp.watch('src/template/**/*.html', html_components);
     gulp.watch('src/*.html').on('change', browserSync.reload);
 };
 
@@ -36,12 +38,17 @@ exports.build = function () {
         gulp.src('src/images/*.*'))
         .pipe(gulp.dest('dist/images'));
 
-    return merge(
-        css_ouput,
-        svg_ouput,
-        gulp.src('src/*.html')
-            .pipe(gulp.dest('dist'))
-    );
+    const html_ouput = streamqueue({objectMode: true},
+        html,
+        gulp.src('src/*.html'))
+        .pipe(gulp.dest('dist'));
+
+    const html_components_ouput = streamqueue({objectMode: true},
+        html_components,
+        gulp.src('src/components/*.html'))
+        .pipe(gulp.dest('dist/components'));
+
+    return merge(css_ouput, svg_ouput, html_ouput, html_components_ouput);
 };
 
 function css() {
@@ -73,5 +80,11 @@ function html() {
             basepath: '@file'
         }))
         .pipe(gulp.dest('src/'))
+        .pipe(browserSync.stream());
+}
+
+function html_components() {
+    return gulp.src(['src/template/components/*.html'])
+        .pipe(gulp.dest('src/components'))
         .pipe(browserSync.stream());
 }
