@@ -1,12 +1,14 @@
 @import '../variables';
 
 .side-nav {
+  z-index: 1;
+
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
 
-  padding-top: r($header-height);
+  margin-top: r($header-height);
 
   max-width: r($nav-width);
   width: 100%;

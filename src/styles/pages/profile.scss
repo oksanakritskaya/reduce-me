@@ -6,6 +6,8 @@
   display: flex;
   flex-wrap: wrap;
 
+  max-width: 1176px;
+
   @media screen and (max-width: $media-m) {
     padding-top: r(30px);
   }

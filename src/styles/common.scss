@@ -3,14 +3,6 @@
 html {
   font-size: $size-base;
   @media screen and (max-width: $media-xl) {
-    font-size: $size-xl;
-  }
-
-  @media screen and (max-width: $media-l) {
-    font-size: $size-l;
-  }
-
-  @media screen and (max-width: $media-m) {
     font-size: $size-m;
   }
 
