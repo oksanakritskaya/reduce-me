@@ -10,12 +10,19 @@
     padding-top: r(30px);
   }
 
+  .field {
+    flex-grow: 1;
+
+    &__input {
+      width: 100%;
+    }
+  }
+
   &__info {
     padding-right: r(93px);
 
     flex-shrink: 1;
     flex-grow: 1;
-    width: calc(80%);
 
     @media screen and (max-width: $media-l) {
       padding-right: r(46px);
@@ -35,9 +42,11 @@
       flex-wrap: wrap;
     }
 
-    .info-item__input {
+    .field__input {
       margin-top: r(15px);
+      margin-right: r(20px);
 
+      flex-grow: 1;
       max-width: calc(100% / 3);
 
       &:last-child {

@@ -32,41 +32,35 @@
 
   @include font-24;
   color: $color_black;
+}
 
-  &__input {
-    padding: 0 r(12px);
-    border: none;
+.field__input {
+  padding: 0 r(12px);
+  border: none;
 
-    height: r(42px);
-    min-width: 160px;
+  height: r(42px);
+  min-width: 160px;
 
-    background-color: #FFFFFF;
-    box-shadow: r(2px) r(2px) r(5px) rgba(0, 0, 0, 0.25);
-    border-radius: r(4px);
+  background-color: #FFFFFF;
+  box-shadow: r(2px) r(2px) r(5px) rgba(0, 0, 0, 0.25);
+  border-radius: r(4px);
 
-    &::placeholder {
-      @include font-16();
-      color: $color_grey-light;
-    }
-
-    &:disabled {
-      padding: 0;
-
-      background-color: transparent;
-      box-shadow: none;
-    }
-
-    &--date {
-      max-width: r(265px);
-      width: 100%;
-      height: r(48px);
-    }
+  &::placeholder {
+    @include font-16();
+    color: $color_grey-light;
   }
 
-  &__label {
-    margin-right: r(20px);
+  &:disabled {
+    padding: 0;
 
-    @include font-medium();
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &--date {
+    max-width: r(265px);
+    width: 100%;
+    height: r(48px);
   }
 
   &--empty {
@@ -90,6 +84,12 @@
       display: none;
     }
   }
+}
+
+.field__label {
+  margin-right: r(20px);
+
+  @include font-medium();
 }
 
 .error {
