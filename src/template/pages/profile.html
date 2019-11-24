@@ -1,7 +1,17 @@
 <div class="profile main-content display-flex">
     <div class="profile__info">
         <div class="info-items__item info-item">
-            <p class="user-login user-login--vip">Seo-Login</p>
+            <div class="display-flex width-100%">
+                <p class="info-item__label field__label user-login">
+                    <span class="user-login--vip">Seo-Login</span>
+                </p>
+                <button class="button" type="button" id="changePassword">Сменить пароль</button>
+            </div>
+            <form class="profile__password">
+                <input class="info-item__input field__input" type="password" placeholder="Старый пароль">
+                <input class="info-item__input field__input" type="password" placeholder="Новый пароль">
+                <input class="info-item__input field__input" type="password" placeholder="Подтверждение пароля">
+            </form>
         </div>
 
         <h3 class="profile__title">Контакты</h3>

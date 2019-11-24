@@ -30,6 +30,7 @@
     border: none;
 
     height: r(42px);
+    min-width: 160px;
 
     @include font-24;
     color: $color_black;

@@ -84,6 +84,10 @@ main {
   display: flex;
 }
 
+.width-100\% {
+  width: 100%;
+}
+
 .user-login {
   @include font-24;
   @include font-medium();

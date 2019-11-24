@@ -8,17 +8,40 @@
   @media screen and (max-width: $media-m) {
     padding-top: r(30px);
   }
+
   &__info {
-    margin-right: r(93px);
+    padding-right: r(93px);
 
     flex-shrink: 1;
     flex-grow: 1;
+    width: calc(80%);
 
     @media screen and (max-width: $media-l) {
-      margin-right: r(46px);
+      padding-right: r(46px);
     }
+
     @media screen and (max-width: $media-m) {
-      margin-right: r(20px);
+      padding-right: r(20px);
+    }
+  }
+
+  &__password {
+    display: none;
+    width: 100%;
+
+    &--opened {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .info-item__input {
+      margin-top: r(15px);
+
+      max-width: calc(100% / 3);
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 

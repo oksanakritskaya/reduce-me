@@ -13,11 +13,17 @@
 
 <script>
     const burger = document.body.querySelector('.nav-toggle');
+    const changePassword = document.body.querySelector('#changePassword');
 
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
 
         const main = document.body.querySelector('.main-container');
         main.classList.toggle('main-container--opened');
+    });
+
+    changePassword.addEventListener('click', function () {
+        const form = document.body.querySelector('.profile__password');
+        form.classList.toggle('profile__password--opened');
     });
 </script>
