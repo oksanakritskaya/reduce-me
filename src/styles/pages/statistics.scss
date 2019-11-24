@@ -13,9 +13,12 @@
 
   .table {
     width: 100%;
+    margin: r(-20px) 0;
 
-    .page__block & {
-      margin: r(-20px) 0;
+    &__cell--hovered:hover {
+      .tooltip:after, .tooltip__text {
+        display: inline;
+      }
     }
   }
 }
