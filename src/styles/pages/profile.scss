@@ -3,6 +3,7 @@
 .profile {
   padding-top: r(60px);
 
+  display: flex;
   flex-wrap: wrap;
 
   @media screen and (max-width: $media-m) {

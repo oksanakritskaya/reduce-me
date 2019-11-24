@@ -1,0 +1,21 @@
+@import "../variables";
+
+.statistics {
+
+  .field {
+    @include font-16();
+
+    &__label {
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .table {
+    width: 100%;
+
+    .page__block & {
+      margin: r(-20px) 0;
+    }
+  }
+}

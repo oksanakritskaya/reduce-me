@@ -155,6 +155,9 @@
   cursor: pointer;
   padding: r(10px) r(35px) r(16px) 0;
 
+  background-color: transparent;
+  border: none;
+
   span,
   span::before,
   span::after {

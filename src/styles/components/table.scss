@@ -1,0 +1,39 @@
+@import "../variables";
+
+.table {
+  @include font-16();
+  color: $color_black;
+
+  &__head, &__body {
+    padding: 0 r(20px);
+  }
+
+  &__head {
+    color: $color_blue;
+    text-transform: uppercase;
+  }
+
+  &__foot {
+    .table__cell:first-child {
+      @include font-bold();
+    }
+
+    .table__row {
+      border-color: transparent;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid $color_blue;
+  }
+
+  &__cell {
+    padding: r(16px) 0;
+    
+    text-align: right;
+    
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
