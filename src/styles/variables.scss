@@ -79,6 +79,11 @@ $media-icons-s: 460px;
   font-weight: 400;
 }
 
+@mixin font-12 {
+  font: normal normal r(12px)/r(14px) $font;
+  font-weight: 400;
+}
+
 @mixin with-hover {
   color: $color_white;
 
