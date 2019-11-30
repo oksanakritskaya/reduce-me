@@ -95,6 +95,25 @@ $media-icons-s: 460px;
   }
 }
 
+@mixin link-hover {
+  position: relative;
+
+  &:hover {
+    &:before {
+      content: '';
+
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+
+      width: 100%;
+
+      border-bottom: 2px solid $color_blue;
+    }
+  }
+}
+
+
 
 @mixin delimiter {
   padding-right: r(15px + 15px);

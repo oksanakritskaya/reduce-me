@@ -127,6 +127,16 @@ main {
   width: 100%;
 }
 
+.link-hover {
+  @include link-hover();
+
+  &.delimiter {
+    &:before {
+      width: calc(100% - 20px);
+    }
+  }
+}
+
 .user-login {
   @include font-24;
   @include font-medium();
