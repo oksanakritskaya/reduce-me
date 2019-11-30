@@ -36,7 +36,9 @@
 }
 
 .side-nav-item {
-  padding: r(16px) r(16px) r(16px) r(53px);
+  $gap: 16px;
+
+  padding: r($gap) r(16px) r(16px) r(53px);
 
   min-height: r(56px);
 
@@ -58,6 +60,26 @@
     padding-left: r(40px);
 
     @include font-medium();
+  }
+
+  &--delimiter {
+    padding-top: r($gap + 62px);
+
+    position: relative;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: r(62px / 2);
+      left: 50%;
+
+      width: calc(100% - #{r(62px)});
+
+      transform: translateX(-50%);
+
+      border-top: 1px solid $color_white;
+    }
   }
 
   &__img {
