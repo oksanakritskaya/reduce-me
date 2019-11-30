@@ -27,6 +27,7 @@ body {
   padding: r($header-height) 0 0 r($nav-width);
 
   width: 100%;
+  min-height: 100vh;
 }
 
 .main-container--opened {
