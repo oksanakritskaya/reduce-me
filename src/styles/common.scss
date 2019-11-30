@@ -132,7 +132,7 @@ main {
 
   &.delimiter {
     &:before {
-      width: calc(100% - #{r(20px)});
+      width: calc(100% - #{r(30px)});
     }
   }
 }
