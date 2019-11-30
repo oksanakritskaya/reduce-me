@@ -15,4 +15,24 @@
   &:hover, &:active {
     background-color: $color_blue--light;
   }
+
+  &--sign {
+    padding: 0 r(22px);
+
+    @include font-40();
+    @include font-bold();
+
+    line-height: r(40px);
+  }
+
+  &--icon {
+    padding: 0;
+
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover, &:active {
+      background-color: transparent;
+    }
+  }
 }

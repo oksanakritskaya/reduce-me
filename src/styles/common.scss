@@ -56,7 +56,7 @@ body {
   }
 
   &__sub-title {
-    margin-bottom: r(40px);
+    margin: r(40px) 0;
 
     @include font-24();
     color: $color-blue;

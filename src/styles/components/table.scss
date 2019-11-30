@@ -29,11 +29,16 @@
 
   &__cell {
     padding: r(16px) 0;
-    
-    text-align: right;
-    
-    &:first-child {
-      text-align: left;
+
+    text-align: left;
+
+    &--number {
+      text-align: right;
+    }
+
+    .button--icon {
+      width: r(13px);
+      height: r(17px);
     }
   }
 }

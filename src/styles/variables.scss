@@ -50,6 +50,10 @@ $media-icons-s: 460px;
   font-weight: 700;
 }
 
+@mixin font-40 {
+  font: normal normal r(40px)/r(47px) $font;
+}
+
 @mixin font-38 {
   font: normal normal r(38px)/r(45px) $font;
   font-weight: 400;
