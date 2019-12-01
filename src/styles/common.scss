@@ -65,6 +65,8 @@ body {
 .page {
   padding: r(50px) r(60px) r(20px);
 
+  width: 100%;
+
   @media screen and (max-width: $media-m) {
     padding: r(30px) r(30px) r(20px);
   }
