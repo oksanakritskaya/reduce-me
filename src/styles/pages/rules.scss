@@ -1,0 +1,9 @@
+@import "../variables";
+
+.rules {
+  &__sub-title {
+    margin-bottom: r(17px);
+
+    @include font-bold();
+  }
+}

@@ -50,6 +50,10 @@ $media-icons-m: 540px;
   @return #{$size / $size-base}rem;
 }
 
+@mixin font-light {
+  font-weight: 300;
+}
+
 @mixin font-medium {
   font-weight: 500;
 }

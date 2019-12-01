@@ -1,0 +1,29 @@
+@import "../variables";
+
+.list {
+  counter-reset: item;
+  padding-left: r(32px);
+
+  &__item {
+    padding-left: r(50px);
+    margin-bottom: r(9px);
+
+    position: relative;
+    display: block;
+
+    @include font-24();
+    @include font-light();
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      content: counter(item) ". ";
+      counter-increment: item;
+
+      @include font-bold();
+      color: $color_blue;
+    }
+  }
+}
