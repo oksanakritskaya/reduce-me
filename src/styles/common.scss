@@ -79,6 +79,9 @@ body {
   &__title {
     margin-bottom: r(40px);
 
+    display: flex;
+    justify-content: space-between;
+
     @include font-38();
     @include font-bold();
     color: $color-blue;
@@ -95,6 +98,8 @@ body {
     margin-bottom: r(40px);
     padding: r(20px);
 
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -109,8 +114,6 @@ body {
 .page-block {
   margin-top: r(-10px);
   margin-left: r(-20px);
-
-  width: 100%;
 
   flex-grow: 1;
   display: flex;
@@ -143,13 +146,44 @@ svg {
   fill: currentColor;
 }
 
-a {
-  text-decoration: none;
-  color: $color_blue;
-}
-
 main {
   display: flex;
+}
+
+.link {
+  position: relative;
+
+  @include font-16();
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color_blue;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+
+    width: 100%;
+
+    border-bottom: 1px solid $color_blue;
+  }
+}
+
+.link-hover {
+  @include link-hover();
+
+  &.delimiter {
+    &:before {
+      width: calc(100% - #{r(30px)});
+    }
+  }
+}
+
+.text {
+  @include font-16();
+  color: $color_black;
 }
 
 .delimiter {
@@ -162,16 +196,6 @@ main {
 
 .width-100\% {
   width: 100%;
-}
-
-.link-hover {
-  @include link-hover();
-
-  &.delimiter {
-    &:before {
-      width: calc(100% - #{r(30px)});
-    }
-  }
 }
 
 .user-login {

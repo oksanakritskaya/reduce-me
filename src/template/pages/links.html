@@ -1,7 +1,9 @@
 <div class="links page">
     <div class="page__wrapper">
-        <h2 class="page__title">Мои ссылки</h2>
-        <div class="page__block">
+        <h2 class="page__title">Мои ссылки
+            <button id="createLink" class="button" type="submit">Создать ссылку</button>
+        </h2>
+        <div class="links__create-link page__block">
             <form class="page-block">
                 <p class="field page-block__item">
                     <label class="field__label" for="link">Новая ссылка:</label>
@@ -9,7 +11,7 @@
                            placeholder="Введите ссылку, которую вы хотите сократить">
                 </p>
                 <div class="page-block__item">
-                    <button class="button" type="submit">Создать</button>
+                    <button id="createButton" class="button" type="button">Создать</button>
                 </div>
             </form>
             <h3 class="page__sub-title">Укажите ссылки на все источники вашего трафика, чтобы избежать бана за
@@ -46,6 +48,25 @@
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="links__created-link page__block">
+            <button id="crossButton" type="button" class="button button--icon button--cross">
+                <svg class="header-item__icon">
+                    <use xlink:href="images/sprite.svg#cross"></use>
+                </svg>
+            </button>
+            <p class="success">Ссылка занесена в базу</p>
+            <a href="#" class="link">Ваша ссылка</a>
+            <p class="text text-ellipsis">https://avatars.mds.yandex.net/get-pdb/2510728/7808f04c-ec8d-4927-826c-ec0937ec2f9c/</p>
+            <a href="#" class="link">Короткая ссылка</a>
+            <p class="text">
+                <span>RDCE.ME/12460435</span>
+                <button type="button" class="button button--icon">
+                    <svg class="header-item__icon">
+                        <use xlink:href="images/sprite.svg#copy"></use>
+                    </svg>
+                </button>
+            </p>
         </div>
         <div class="page__block">
             <table class="table">

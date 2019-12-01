@@ -18,6 +18,14 @@
     text-transform: uppercase;
   }
 
+  &__body {
+    .links & {
+      .table__row:last-child {
+        border-color: transparent;
+      }
+    }
+  }
+
   &__foot {
     .table__cell:first-child {
       @include font-bold();

@@ -4,6 +4,8 @@
 <script>
     const burger = document.body.querySelector('.nav-toggle');
     const changePassword = document.body.querySelector('#changePassword');
+    const createLink = document.body.querySelector('#createLink');
+    const form = document.body.querySelector('.links__create-link');
 
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
@@ -12,8 +14,39 @@
         main.classList.toggle('main-container--opened');
     });
 
-    changePassword.addEventListener('click', function () {
-        const form = document.body.querySelector('.profile__password');
-        form.classList.toggle('profile__password--opened');
-    });
+    if(changePassword) {
+        changePassword.addEventListener('click', function () {
+            const form = document.body.querySelector('.profile__password');
+            form.classList.toggle('profile__password--opened');
+        });
+    }
+
+    if(createLink) {
+        const form = document.body.querySelector('.links__create-link');
+        const createButton = document.body.querySelector('#createButton');
+
+        createLink.addEventListener('click', function () {
+            form.classList.toggle('links__create-link--opened');
+
+            createLink.style.display = "none";
+        });
+
+        if(createButton) {
+            const crossButton = document.body.querySelector('#crossButton');
+            const currentForm = document.body.querySelector('.links__created-link');
+
+            createButton.addEventListener('click', function () {
+                currentForm.classList.toggle('links__created-link--opened');
+
+                form.style.display = "none";
+            });
+
+            if(crossButton) {
+                crossButton.addEventListener('click', function () {
+                    createLink.style.display = "flex";
+                    currentForm.style.display = "none";
+                });
+            }
+        }
+    }
 </script>

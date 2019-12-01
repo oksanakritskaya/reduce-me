@@ -100,9 +100,15 @@
   @include font-medium();
 }
 
-.error {
+.error, .success {
   @include font-24();
-  color: $color-red;
-
   white-space: nowrap;
+}
+
+.error {
+  color: $color-red;
+}
+
+.success {
+  color: $color-green;
 }
