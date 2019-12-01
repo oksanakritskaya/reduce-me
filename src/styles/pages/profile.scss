@@ -3,13 +3,21 @@
 .profile {
   padding-top: r(60px);
 
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 1176px;
-
   @media screen and (max-width: $media-m) {
     padding-top: r(30px);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    max-width: 1176px;
+
+    @media screen and (max-width: $media-xxxs) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   .page__block {
@@ -25,35 +33,29 @@
   }
 
   &__info {
-    padding-right: r(93px);
-
     flex-shrink: 1;
-    flex-grow: 1;
-
-    @media screen and (max-width: $media-l) {
-      padding-right: r(46px);
-    }
-
-    @media screen and (max-width: $media-m) {
-      padding-right: r(20px);
+    flex-basis: 75%;
+    @media screen and (max-width: $media-xxxs) {
+      flex-basis: 100%;
     }
   }
 
   &__password {
     display: none;
+
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &--opened {
       display: flex;
-      flex-wrap: wrap;
     }
 
     .field__input {
       margin-top: r(15px);
-      margin-right: r(20px);
 
       flex-grow: 1;
-      max-width: calc(100% / 3);
+      max-width: 264px;
 
       &:last-child {
         margin-right: 0;
@@ -71,6 +73,7 @@
 
   &__avatar {
     flex-shrink: 0;
+    max-width: 202px;
   }
 
   &__avatar-content {

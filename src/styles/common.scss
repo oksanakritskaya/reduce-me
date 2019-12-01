@@ -170,6 +170,8 @@ main {
     padding-right: r($size + $gap);
     position: relative;
 
+    height: r(24px);
+
     &:before, &:after {
       content: '';
 

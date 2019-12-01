@@ -7,6 +7,7 @@
   @include font-18();
   @include font-bold();
   color: $color_white;
+  text-align: center;
 
   background-color: $color_blue;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
