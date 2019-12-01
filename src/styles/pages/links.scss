@@ -1,36 +1,51 @@
 @import "../variables";
 
 .links {
-  .field {
-    flex-grow: 1;
-
-    &__input {
-      flex-grow: 1;
-    }
-  }
-
   .page__sub-title {
     margin-top: r(30px);
   }
 
   .form {
-    display: flex;
     width: 100%;
 
     &__item {
-      flex: 0 0 50%;
-    }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    .field:not(:last-child) {
-      margin-bottom: r(23px);
+      &:not(:last-child) .field {
+        margin-bottom: r(23px);
+      }
+
+      .field {
+        margin-right: 0;
+
+        &__input {
+          width: 100%;
+        }
+
+        &:first-child {
+          flex-basis: 43.9%;
+
+          .field__input {
+            max-width: 279px;
+          }
+        }
+
+        &:last-child {
+          flex-basis: 54.6%;
+          .field__input {
+            max-width: 566px;
+          }
+          .field__input--with-button {
+            max-width: 476px;
+          }
+        }
+      }
     }
 
     .button {
       margin-left: r(20px);
     }
-  }
-
-  .table {
-    width: 100%;
   }
 }

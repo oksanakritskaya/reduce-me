@@ -4,6 +4,11 @@
   @include font-16();
   color: $color_black;
 
+  .statistics &, .links & {
+    width: 100%;
+    margin: r(-20px) 0;
+  }
+
   &__head, &__body {
     padding: 0 r(20px);
   }
@@ -31,6 +36,7 @@
     padding: r(16px) r(6px);
 
     text-align: left;
+    max-width: 0;
 
     &--number {
       text-align: right;

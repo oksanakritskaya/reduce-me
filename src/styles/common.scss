@@ -1,5 +1,13 @@
 @import 'variables';
 
+$sizes: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+@each $size in $sizes {
+  .width-#{$size}\% {
+    width: $size * 1%;
+  }
+}
+
 html {
   font-size: $size-base;
   @media screen and (max-width: $media-xl) {
@@ -57,10 +65,13 @@ body {
 .page {
   padding: r(50px) r(60px) r(20px);
 
-  width: 100%;
-
   @media screen and (max-width: $media-m) {
     padding: r(30px) r(30px) r(20px);
+  }
+
+  .page__wrapper {
+    width: 100%;
+    max-width: 1380px;
   }
 
   &__title {
@@ -242,4 +253,14 @@ main {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
   }
+}
+
+.text-ellipsis {
+  display: inline-block;
+  max-width: calc(99% - 17px);
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  overflow: hidden;
 }
