@@ -150,11 +150,14 @@ main {
   display: flex;
 }
 
+a {
+  text-decoration: none;
+}
+
 .link {
   position: relative;
 
   @include font-16();
-  text-decoration: none;
   text-transform: uppercase;
   color: $color_blue;
 
