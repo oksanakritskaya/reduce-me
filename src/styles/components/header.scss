@@ -8,7 +8,7 @@
   right: 0;
 
   width: 100%;
-  height: r($header-height);
+  height: $header-height;
 
   display: flex;
   align-items: center;
@@ -90,8 +90,10 @@
   }
 
   &__logo {
-    height: r(43px);
-    width: r(43px);
+    padding: r(10px) 0;
+
+    max-height: 43px;
+    max-width: 43px;
   }
 
   &__name {
@@ -102,7 +104,7 @@
     white-space: nowrap;
     color: $color_white;
 
-    @media screen and (max-width: $media-icons-s) {
+    @media screen and (max-width: $media-icons-m) {
       display: none;
     }
   }
@@ -119,8 +121,8 @@
   }
 
   &__icon {
-    width: r($icon-size);
-    height: r($icon-size);
+    max-width: $icon-size;
+    max-height: $icon-size;
   }
 
   &__label {
@@ -141,6 +143,10 @@
 
 .header-nav-item {
   padding: r(25px);
+
+  height: 100%;
+  display: flex;
+  align-items: center;
 
   @include with-hover();
 

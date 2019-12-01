@@ -24,7 +24,7 @@ body {
 }
 
 .main-container {
-  padding: r($header-height) 0 0 $nav-width;
+  padding: $header-height 0 0 $nav-width;
 
   width: 100%;
   min-height: 100vh;

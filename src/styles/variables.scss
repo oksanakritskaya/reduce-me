@@ -11,7 +11,7 @@ $color-red: #DE0000;
 $color_white: #F0F0F0;
 
 $icon-size: 17px;
-$header-height: 70px;
+$header-height: 6.6vh;
 
 $nav-width: 6.8vw;
 $nav-width--l: 8vw;
@@ -43,7 +43,7 @@ $media-xxxxs: 420px;
 $media-icons-xl: 740px;
 $media-icons-l: 630px;
 $media-icons-m: 540px;
-$media-icons-s: 460px;
+//$media-icons-s: 460px;
 
 @function r($size) {
   @return #{$size / $size-base}rem;
