@@ -10,45 +10,75 @@
 
   padding-top: r($header-height);
 
-  max-width: r($nav-width);
-  width: 100%;
+  width: $nav-width;
   height: 100%;
 
   background-color: $color_blue;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
-  transition: max-width 0.5s;
+  transition: width 0.5s;
+
+  @media screen and (max-width: $media-xxs) {
+    width: $nav-width--l;
+  }
+
+  @media screen and (max-width: $media-xxxs) {
+    width: $nav-width--m;
+  }
+
+  @media screen and (max-width: $media-xxxxs) {
+    width: $nav-width--s;
+  }
 
   .main-container--opened & {
-    max-width: r($nav-width--opened);
+    width: $nav-width * $nav-width-mult;
 
-    @media screen and (max-width: $media-icons-l) {
-      max-width: 100%;
+    @media screen and (max-width: $media-xxs) {
+      width: $nav-width--l * $nav-width-mult;
+    }
+
+    @media screen and (max-width: $media-xxxs) {
+      width: 100%;
     }
   }
 
   &__menu {
+    padding-top: r(10px);
+
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     height: 100%;
     overflow-y: auto;
+
+    .main-container--opened & {
+      align-items: flex-start;
+    }
   }
 }
 
 .side-nav-item {
   $gap: 16px;
 
-  padding: r($gap) r(16px) r(16px) r(53px);
+  padding: r($gap) 0;
 
   display: flex;
+  justify-content: center;
   align-items: center;
+
+  width: 100%;
 
   @include font-24();
   color: $color_white;
 
   .main-container--opened & {
+    padding-left: 12.62%;
+    padding-right: r(16px);
+
     min-width: r(270px);
+
+    justify-content: flex-start;
   }
 
   &:not(&--info) {
@@ -56,9 +86,11 @@
   }
 
   &--info {
-    padding-left: r(40px);
-
     @include font-medium();
+
+    .main-container--opened & {
+      padding-left: 9.52%;
+    }
   }
 
   &--delimiter {
@@ -78,18 +110,32 @@
       transform: translateX(-50%);
 
       border-top: 1px solid $color_white;
+
+      @media screen and (max-width: $media-xxxs) {
+        width: calc(100% - #{r(40px)});
+      }
     }
   }
 
   &__img {
-    width: r(24px);
-    height: r(24px);
+    max-width: 24px;
+    max-height: 24px;
+
+    @media screen and (max-width: $media-xxs) {
+      max-width: 20px;
+      max-height: 20px;
+    }
 
     .side-nav-item--info & {
-      width: r(50px);
-      height: r(50px);
+      max-width: 50px;
+      max-height: 50px;
 
       border-radius: 50%;
+
+      @media screen and (max-width: $media-xxs) {
+        max-width: 46px;
+        max-height: 46px;
+      }
     }
   }
 

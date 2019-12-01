@@ -21,11 +21,23 @@
   background-color: $color_blue;
 
   &__nav-toggle {
-    width: r($nav-width);
+    width: $nav-width;
 
     flex-shrink: 0;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: $media-xxs) {
+      width: $nav-width--l;
+    }
+
+    @media screen and (max-width: $media-xxxs) {
+      width: $nav-width--m;
+    }
+
+    @media screen and (max-width: $media-xxxxs) {
+      width: $nav-width--s;
+    }
   }
 
   &__content {

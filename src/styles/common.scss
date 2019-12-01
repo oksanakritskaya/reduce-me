@@ -24,17 +24,33 @@ body {
 }
 
 .main-container {
-  padding: r($header-height) 0 0 r($nav-width);
+  padding: r($header-height) 0 0 $nav-width;
 
   width: 100%;
   min-height: 100vh;
+
+  @media screen and (max-width: $media-xxs) {
+    padding-left: $nav-width--l;
+  }
+
+  @media screen and (max-width: $media-xxxs) {
+    padding-left: $nav-width--m;
+  }
+
+  @media screen and (max-width: $media-xxxxs) {
+    padding-left: $nav-width--s;
+  }
 }
 
 .main-container--opened {
-  padding-left: r($nav-width--opened);
+  padding-left: $nav-width * $nav-width-mult;
 
-  @media screen and (max-width: $media-icons-l) {
-    padding-left: r($nav-width);
+  @media screen and (max-width: $media-xxs) {
+    padding-left: $nav-width--l * $nav-width-mult;
+  }
+
+  @media screen and (max-width: $media-xxxs) {
+    padding-left: $nav-width;
   }
 }
 
@@ -101,6 +117,11 @@ body {
 b {
   font-weight: bold;
   text-transform: uppercase;
+}
+
+svg, img {
+  height: 100%;
+  width: 100%;
 }
 
 svg {

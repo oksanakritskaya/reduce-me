@@ -12,8 +12,13 @@ $color_white: #F0F0F0;
 
 $icon-size: 17px;
 $header-height: 70px;
-$nav-width: 130px;
-$nav-width--opened: 420px;
+
+$nav-width: 6.8vw;
+$nav-width--l: 8vw;
+$nav-width--m: 10vw;
+$nav-width--s: 12vw;
+
+$nav-width-mult: 3.23;
 
 $url: '../../images';
 $url_sprite: '../../images/sprite.svg';
@@ -32,6 +37,8 @@ $media-m: 1115px;
 $media-s: 990px;
 $media-xs: 900px;
 $media-xxs: 800px;
+$media-xxxs: 640px;
+$media-xxxxs: 420px;
 
 $media-icons-xl: 740px;
 $media-icons-l: 630px;
