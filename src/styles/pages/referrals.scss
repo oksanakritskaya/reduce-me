@@ -1,0 +1,9 @@
+@import "../variables";
+
+.referrals {
+  .text {
+    margin-bottom: r(40px);
+
+    @include font-18();
+  }
+}

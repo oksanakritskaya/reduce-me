@@ -1,0 +1,9 @@
+@import "../variables";
+
+.undefined {
+  width: 100%;
+  height: 100%;
+
+  background-image: url('#{$url}/404-fon.svg');
+  background-size: contain;
+}

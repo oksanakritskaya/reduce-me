@@ -29,6 +29,20 @@
 
     .link {
       margin-bottom: r(10px);
+
+      text-transform: uppercase;
+
+      &:before {
+        content: '';
+
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+
+        width: 100%;
+
+        border-bottom: 1px solid $color_blue;
+      }
     }
 
     .text {

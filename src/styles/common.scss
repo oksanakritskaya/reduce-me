@@ -31,11 +31,13 @@ body {
   display: flex;
 }
 
-.main-container {
-  padding: $header-height 0 0 $nav-width;
-
+.main {
   width: 100%;
   min-height: 100vh;
+}
+
+.main-container {
+  padding: $header-height 0 0 $nav-width;
 
   @media screen and (max-width: $media-xxs) {
     padding-left: $nav-width--l;
@@ -69,6 +71,10 @@ body {
 
   @media screen and (max-width: $media-m) {
     padding: r(30px) r(30px) r(20px);
+  }
+
+  &--background {
+    padding: 0;
   }
 
   .page__wrapper {
@@ -176,10 +182,9 @@ a {
   position: relative;
 
   @include font-16();
-  text-transform: uppercase;
   color: $color_blue;
 
-  &:before {
+  &:hover:before {
     content: '';
 
     position: absolute;
