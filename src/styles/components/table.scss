@@ -1,13 +1,12 @@
 @import "../variables";
 
 .table {
+  margin: r(-20px) 0;
+  width: 100%;
+  min-width: r(300px);
+
   @include font-16();
   color: $color_black;
-
-  .statistics &, .links & {
-    width: 100%;
-    margin: r(-20px) 0;
-  }
 
   &__head, &__body {
     padding: 0 r(20px);
@@ -19,16 +18,23 @@
   }
 
   &__body {
-    .links & {
-      .table__row:last-child {
-        border-color: transparent;
-      }
+    .links & .table__row:last-child {
+      border-color: transparent;
+    }
+
+    .rates & .table__cell {
+      text-transform: uppercase;
     }
   }
 
   &__foot {
     .table__cell:first-child {
       @include font-bold();
+
+      .rates & {
+        font-weight: normal;
+        text-transform: uppercase;
+      }
     }
 
     .table__row {

@@ -1,68 +1,90 @@
 <div class="profile page">
     <div class="page__wrapper">
-        <div class="profile__info">
-            <div class="page__block">
-                <p class="field__label user-login">
-                    <span class="user-login--vip">Seo-Login</span>
-                </p>
-                <button class="button" type="button" id="changePassword">Сменить пароль</button>
-                <form class="profile__password">
-                    <input class="field__input" type="password" placeholder="Старый пароль">
-                    <input class="field__input" type="password" placeholder="Новый пароль">
-                    <input class="field__input" type="password" placeholder="Подтверждение пароля">
+        <div class="page-block page-block--start">
+            <div class="page-block__item page-block__item--column">
+                <div class="page__block">
+                    <p class="field__label user-login">
+                        <span class="user-login--vip">Seo-Login</span>
+                    </p>
+                    <button class="button" type="button" id="changePassword">Сменить пароль</button>
+                    <form class="profile__password">
+                        <input class="field__input" type="password" placeholder="Старый пароль">
+                        <input class="field__input" type="password" placeholder="Новый пароль">
+                        <input class="field__input" type="password" placeholder="Подтверждение пароля">
+                    </form>
+                </div>
+
+                <h3 class="profile__title">Контакты</h3>
+
+                <form class="page__block">
+                    <div class="page-block">
+                        <p class="field page-block__item">
+                            <label class="field__label" for="mail">Почта:</label>
+                            <input class="field__input" type="email" id="mail" disabled value="reduce@reduceme.ru" placeholder="введите новый">
+                        </p>
+                        <div class="page-block__item">
+                            <span class="error">не подтверждена</span>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="page__block">
+                    <div class="page-block">
+                        <p class="field page-block__item">
+                            <label class="field__label" for="tel">Telegram:</label>
+                            <input class="field__input" type="text" id="tel" placeholder="введите новый">
+                        </p>
+                        <div class="page-block__item">
+                            <button class="button" type="submit">Сменить</button>
+                        </div>
+                    </div>
+                </form>
+
+                <h3 class="profile__title">Кошельки</h3>
+
+                <form class="page__block">
+                    <div class="page-block">
+                        <p class="field field--empty page-block__item">
+                            <label class="field__label" for="wm">Webmoney:</label>
+                            <input class="field__input" type="email" id="wm" placeholder="введите новый" disabled>
+                        </p>
+                        <div class="page-block__item">
+                            <button class="button" type="submit">Привязать</button>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="page__block">
+                    <div class="page-block">
+                        <p class="field page-block__item">
+                            <label class="field__label" for="qiwi">Qiwi:</label>
+                            <input class="field__input" type="text" id="qiwi" placeholder="введите номер">
+                        </p>
+                        <div class="page-block__item">
+                            <button class="button" type="submit">Привязать</button>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="page__block">
+                    <div class="page-block">
+                        <p class="field page-block__item">
+                            <label class="field__label" for="ym">YandexMoney:</label>
+                            <input class="field__input" type="text" id="ym" disabled value="9999999999" placeholder="введите номер">
+                        </p>
+                        <div class="page-block__item">
+                            <button class="button" type="submit">Привязать</button>
+                        </div>
+                    </div>
                 </form>
             </div>
-
-            <h3 class="profile__title">Контакты</h3>
-
-            <form class="page__block">
-                <p class="field">
-                    <label class="field__label" for="mail">Почта:</label>
-                    <input class="field__input" type="email" id="mail" disabled value="reduce@reduceme.ru" placeholder="введите новый">
-                </p>
-                <span class="error">не подтверждена</span>
-            </form>
-
-            <form class="page__block">
-                <p class="field">
-                    <label class="field__label" for="tel">Telegram:</label>
-                    <input class="field__input" type="text" id="tel" placeholder="введите новый">
-                </p>
-                <button class="button" type="submit">Сменить</button>
-            </form>
-
-            <h3 class="profile__title">Кошельки</h3>
-
-            <form class="page__block">
-                <p class="field field--empty">
-                    <label class="field__label" for="wm">Webmoney:</label>
-                    <input class="field__input" type="email" id="wm" placeholder="введите новый" disabled>
-                </p>
-                <button class="button" type="submit">Привязать</button>
-            </form>
-
-            <form class="page__block">
-                <p class="field">
-                    <label class="field__label" for="qiwi">Qiwi:</label>
-                    <input class="field__input" type="text" id="qiwi" placeholder="введите номер">
-                </p>
-                <button class="button" type="submit">Привязать</button>
-            </form>
-
-            <form class="page__block">
-                <p class="field">
-                    <label class="field__label" for="ym">YandexMoney:</label>
-                    <input class="field__input" type="text" id="ym" disabled value="9999999999" placeholder="введите номер">
-                </p>
-                <button class="button" type="submit">Привязать</button>
-            </form>
-        </div>
-        <div class="profile__avatar">
-            <div class="profile__avatar-content">
-                <img class="profile__photo" src="images/avatar.png" alt="avatar">
+            <div class="page-block__item page-block__item--column">
+                <div class="profile__avatar-content">
+                    <img class="profile__photo" src="images/avatar.png" alt="avatar">
+                </div>
+                <input type="file" name="file" id="file" class="inputfile" />
+                <label for="file" class="button">Сменить аватар</label>
             </div>
-            <input type="file" name="file" id="file" class="inputfile" />
-            <label for="file" class="button width-100%">Сменить аватар</label>
         </div>
     </div>
 </div>

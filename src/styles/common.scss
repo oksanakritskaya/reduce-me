@@ -92,6 +92,10 @@ body {
 
     @include font-24();
     color: $color-blue;
+
+    &--black {
+      color: $color_black;
+    }
   }
 
   &__block {
@@ -120,6 +124,10 @@ body {
   flex-wrap: wrap;
   align-items: center;
 
+  &--start {
+    align-items: flex-start;
+  }
+
   & > * {
     padding-top: r(10px);
     padding-left: r(20px);
@@ -129,6 +137,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    &--column {
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--grow {
+      flex-grow: 1;
+    }
   }
 }
 
@@ -201,6 +219,18 @@ a {
   width: 100%;
 }
 
+.icon {
+  max-width: $icon-size;
+  max-height: $icon-size;
+
+  width: 100%;
+  height: 100%;
+
+  &--round {
+    border-radius: 50%;
+  }
+}
+
 .user-login {
   @include font-24;
   @include font-medium();
@@ -212,6 +242,7 @@ a {
     padding-right: r($size + $gap);
     position: relative;
 
+    display: inline-block;
     height: r(24px);
 
     &:before, &:after {

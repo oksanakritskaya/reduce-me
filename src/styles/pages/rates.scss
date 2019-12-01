@@ -1,0 +1,22 @@
+@import "../variables";
+
+.rates {
+  .page-block {
+    margin-left: r(-40px);
+  }
+
+  .page-block__item {
+    padding-left: r(40px);
+  }
+
+  .page__sub-title {
+    margin: 0 0 r(22px);
+
+    @include font-bold();
+  }
+
+  .page__block {
+    width: 100%;
+  }
+
+}

@@ -1,18 +1,20 @@
 <div class="statistics page">
     <h2 class="page__title">Статистика</h2>
     <form class="page__block">
-        <div class="page-block__item page-block__item--wrapped">
-            <p class="field">
-                <label class="field__label" for="from">Статистика за период с:</label>
-                <input class="field__input field__input--date" type="date" id="from" placeholder="ll">
-            </p>
-            <p class="field">
-                <label class="field__label" for="to">по:</label>
-                <input class="field__input field__input--date" type="date" id="to">
-            </p>
-        </div>
-        <div class="page-block__item">
-            <button class="button" type="submit">Вывести статистика за период</button>
+        <div class="page-block">
+            <div class="page-block__item page-block__item--grow">
+                <p class="field">
+                    <label class="field__label" for="from">Статистика за период с:</label>
+                    <input class="field__input field__input--date" type="date" id="from" placeholder="ll">
+                </p>
+                <p class="field">
+                    <label class="field__label" for="to">по:</label>
+                    <input class="field__input field__input--date" type="date" id="to">
+                </p>
+            </div>
+            <div class="page-block__item">
+                <button class="button" type="submit">Вывести статистика за период</button>
+            </div>
         </div>
     </form>
 

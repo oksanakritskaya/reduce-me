@@ -1,8 +1,8 @@
 @import "../variables";
 
 .statistics {
-
   .field {
+    flex-grow: 0;
     @include font-16();
 
     &__label {
