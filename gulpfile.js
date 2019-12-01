@@ -9,7 +9,7 @@ sass.compiler = require('node-sass');
 const fileinclude = require('gulp-file-include');
 
 exports.run = function () {
-    css();
+    css_watch();
     svg();
     html();
 
@@ -19,7 +19,7 @@ exports.run = function () {
         }
     });
 
-    gulp.watch(['src/styles/*.scss', 'src/styles/**/*.scss'], css);
+    gulp.watch(['src/styles/*.scss', 'src/styles/**/*.scss'], css_watch);
     gulp.watch('src/images/icons/*.svg', svg);
     gulp.watch(['src/template/*.html', 'src/template/**/*.html'], html);
     gulp.watch('src/*.html').on('change', browserSync.reload);
@@ -47,6 +47,13 @@ exports.build = function () {
 function css() {
     return gulp
         .src(['src/styles/*.scss', 'src/styles/**/*.scss'])
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('src/css'));
+}
+
+function css_watch() {
+    return gulp
+        .src('src/styles/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('src/css'))
         .pipe(browserSync.stream());

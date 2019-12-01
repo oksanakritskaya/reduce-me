@@ -8,38 +8,25 @@
   .form {
     width: 100%;
 
-    &__item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .page-block {
+    }
 
-      &:not(:last-child) .field {
-        margin-bottom: r(23px);
+    .page-block__item {
+      &:nth-child(odd) {
+        flex-basis: 43.9%;
+
+        .field__input {
+          max-width: 279px;
+        }
       }
 
-      .field {
-        margin-right: 0;
-
-        &__input {
-          width: 100%;
+      &:nth-child(even) {
+        flex-basis: 52.6%;
+        .field__input {
+          max-width: 566px;
         }
-
-        &:first-child {
-          flex-basis: 43.9%;
-
-          .field__input {
-            max-width: 279px;
-          }
-        }
-
-        &:last-child {
-          flex-basis: 54.6%;
-          .field__input {
-            max-width: 566px;
-          }
-          .field__input--with-button {
-            max-width: 476px;
-          }
+        .field__input--with-button {
+          max-width: 476px;
         }
       }
     }

@@ -108,16 +108,18 @@ body {
 
 .page-block {
   margin-top: r(-10px);
+  margin-left: r(-20px);
 
   width: 100%;
 
+  flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 
   & > * {
     padding-top: r(10px);
+    padding-left: r(20px);
   }
 
   &__item {
