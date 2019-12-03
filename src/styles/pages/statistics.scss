@@ -1,6 +1,10 @@
 @import "../variables";
 
 .statistics {
+  .page-block__item {
+    flex-wrap: nowrap;
+  }
+
   .field {
     flex-grow: 0;
     @include font-16();
