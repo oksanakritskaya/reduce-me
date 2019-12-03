@@ -6,6 +6,7 @@ const browserSync = require('browser-sync');
 const svgSprite = require('gulp-svg-sprite');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const fileinclude = require('gulp-file-include');
 
 exports.run = function () {
@@ -48,6 +49,7 @@ function css() {
     return gulp
         .src(['src/styles/*.scss', 'src/styles/**/*.scss'])
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('src/css'));
 }
 
@@ -55,6 +57,7 @@ function css_watch() {
     return gulp
         .src('src/styles/style.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('src/css'))
         .pipe(browserSync.stream());
 }

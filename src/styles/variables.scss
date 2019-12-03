@@ -63,41 +63,59 @@ $media-icons-m: 540px;
 }
 
 @mixin font-40 {
-  font: normal normal r(40px)/r(47px) $font;
+  font-family: $font;
+  font-weight: 400;
+  font-size: r(40px);
+  line-height: r(47px);
 }
 
 @mixin font-38 {
-  font: normal normal r(38px)/r(45px) $font;
+  font-family: $font;
   font-weight: 400;
+  font-size: r(38px);
+  line-height: r(45px);
 }
 
 @mixin font-36 {
-  font: normal normal r(36px)/r(45px) $font_header;
+  font-family: $font_header;
+  font-weight: 400;
+  font-size: r(36px);
+  line-height: r(45px);
 }
 
 @mixin font-28 {
-  font: normal 300 r(28px)/r(33px) $font;
+  font-family: $font;
   font-weight: 400;
+  font-size: r(28px);
+  line-height: r(33px);
 }
 
 @mixin font-24 {
-  font: normal 300 r(24px)/r(28px) $font;
+  font-family: $font;
   font-weight: 400;
+  font-size: r(24px);
+  line-height: r(28px);
 }
 
 @mixin font-18 {
-  font: normal normal r(18px)/r(21px) $font;
+  font-family: $font;
   font-weight: 400;
+  font-size: r(18px);
+  line-height: r(21px);
 }
 
 @mixin font-16 {
-  font: normal normal r(16px)/r(19px) $font;
+  font-family: $font;
   font-weight: 400;
+  font-size: r(16px);
+  line-height: r(19px);
 }
 
 @mixin font-12 {
-  font: normal normal r(12px)/r(14px) $font;
+  font-family: $font;
   font-weight: 400;
+  font-size: r(12px);
+  line-height: r(14px);
 }
 
 @mixin with-hover {
