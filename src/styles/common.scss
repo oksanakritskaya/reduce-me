@@ -238,6 +238,35 @@ a {
     border-radius: 50%;
   }
 }
+.icon-pseudo {
+  @include icon-item(40px, 10px);
+
+  &--wm:before {
+    background-image: url('#{$url}/wm.png');
+  }
+
+  &--qiwi:before {
+    background-image: url('#{$url}/qiwi.png');
+  }
+
+  &--ym:before {
+    background-image: url('#{$url}/ym.png');
+  }
+}
+
+.status {
+  &--process {
+    color: $color_yellow;
+  }
+
+  &--success {
+    color: $color_green;
+  }
+
+  &--error {
+    color: $color_red;
+  }
+}
 
 .user-login {
   @include font-24;

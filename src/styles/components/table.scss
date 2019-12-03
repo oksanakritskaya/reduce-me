@@ -8,6 +8,12 @@
   @include font-16();
   color: $color_black;
 
+  &--without-total {
+    .table__body .table__row:last-child{
+      border-color: transparent;
+    }
+  }
+
   &__head, &__body {
     padding: 0 r(20px);
   }
@@ -18,10 +24,6 @@
   }
 
   &__body {
-    .links & .table__row:last-child {
-      border-color: transparent;
-    }
-
     .rates & .table__cell {
       text-transform: uppercase;
     }

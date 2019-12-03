@@ -31,6 +31,28 @@
 
   @include font-24;
   color: $color_black;
+
+  &--empty {
+    .field__label {
+      margin-right: 0;
+
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      &:after {
+        content: 'не заполнен';
+        padding-left: r(10px);
+
+        @include font-24();
+        color: $color_blue;
+        white-space: nowrap;
+      }
+    }
+
+    .field__input {
+      display: none;
+    }
+  }
 }
 
 .field__wrapper {
@@ -69,28 +91,6 @@
     width: 100%;
     height: r(48px);
   }
-
-  &--empty {
-    .field__label {
-      margin-right: 0;
-
-      flex-grow: 1;
-      flex-shrink: 1;
-
-      &:after {
-        content: 'не заполнен';
-        padding-left: r(10px);
-
-        @include font-24();
-        color: $color_blue;
-        white-space: nowrap;
-      }
-    }
-
-    .field__input {
-      display: none;
-    }
-  }
 }
 
 .field__label {
@@ -98,33 +98,4 @@
   flex-shrink: 2;
 
   @include font-medium();
-
-  &--wm, &--qiwi, &--ym {
-    @include icon-item(40px, 10px);
-  }
-
-  &--wm:before {
-    background-image: url('#{$url}/wm.png');
-  }
-
-  &--qiwi:before {
-    background-image: url('#{$url}/qiwi.png');
-  }
-
-  &--ym:before {
-    background-image: url('#{$url}/ym.png');
-  }
-}
-
-.error, .success {
-  @include font-24();
-  white-space: nowrap;
-}
-
-.error {
-  color: $color-red;
-}
-
-.success {
-  color: $color-green;
 }
