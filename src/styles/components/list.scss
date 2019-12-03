@@ -2,28 +2,42 @@
 
 .list {
   counter-reset: item;
-  padding-left: r(32px);
+  @include font-18();
 
   &__item {
-    padding-left: r(50px);
     margin-bottom: r(9px);
+    padding-left: r(24px);
 
     position: relative;
     display: block;
 
-    @include font-24();
-    @include font-light();
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &:before {
       position: absolute;
       top: 0;
       left: 0;
 
-      content: counter(item) ". ";
+      content: counter(item) ".";
       counter-increment: item;
+    }
+  }
 
-      @include font-bold();
-      color: $color_blue;
+  .rules & {
+    padding-left: r(32px);
+
+    @include font-24();
+    @include font-light();
+
+    &__item {
+      padding-left: r(50px);
+
+      &:before {
+        @include font-bold();
+        color: $color_blue;
+      }
     }
   }
 }

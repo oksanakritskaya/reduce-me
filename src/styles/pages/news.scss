@@ -1,0 +1,36 @@
+@import "../variables";
+
+.news {
+  @include font-18();
+  color: $color_black;
+
+  &__title {
+    padding: r(4px) 0 r(20px);
+    margin: 0 0 r(30px);
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    border-bottom: 1px solid $color_blue;
+
+    @include font-bold();
+  }
+
+  &__content-item {
+    margin-bottom: r(16px);
+  }
+  
+  &__rating {
+    margin-top: r(20px);
+    margin-left: auto;
+
+    display: flex;
+
+    @include font-bold();
+
+    &-value {
+      margin: 0 r(14px);
+    }
+  }
+}
