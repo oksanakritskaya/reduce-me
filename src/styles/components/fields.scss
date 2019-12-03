@@ -98,6 +98,22 @@
   flex-shrink: 2;
 
   @include font-medium();
+
+  &--wm, &--qiwi, &--ym {
+    @include icon-item(40px, 10px);
+  }
+
+  &--wm:before {
+    background-image: url('#{$url}/wm.png');
+  }
+
+  &--qiwi:before {
+    background-image: url('#{$url}/qiwi.png');
+  }
+
+  &--ym:before {
+    background-image: url('#{$url}/ym.png');
+  }
 }
 
 .error, .success {
