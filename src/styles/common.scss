@@ -82,6 +82,18 @@ body {
     max-width: 1380px;
   }
 
+  &__title-wrap {
+    margin-bottom: r(40px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .page__title, .text {
+      margin-bottom: 0;
+    }
+  }
+
   &__title {
     margin-bottom: r(40px);
 
@@ -232,6 +244,10 @@ a {
 .text {
   @include font-16();
   color: $color_black;
+
+  &--blue {
+    color: $color_blue;
+  }
 }
 
 .delimiter {

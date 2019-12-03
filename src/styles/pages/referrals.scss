@@ -1,7 +1,7 @@
 @import "../variables";
 
 .referrals {
-  .text {
+  &__note {
     margin-bottom: r(40px);
 
     @include font-18();
