@@ -6,6 +6,7 @@
     const changePassword = document.body.querySelector('#changePassword');
     const createLink = document.body.querySelector('#createLink');
     const form = document.body.querySelector('.links__create-link');
+    const payoutsButton = document.body.querySelector('#payoutsButton');
 
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
@@ -17,7 +18,7 @@
     if(changePassword) {
         changePassword.addEventListener('click', function () {
             const form = document.body.querySelector('.profile__password');
-            form.classList.toggle('profile__password--opened');
+            form.classList.toggle('note--opened');
         });
     }
 
@@ -26,7 +27,7 @@
         const createButton = document.body.querySelector('#createButton');
 
         createLink.addEventListener('click', function () {
-            form.classList.toggle('links__create-link--opened');
+            form.classList.toggle('note--opened');
 
             createLink.style.display = "none";
         });
@@ -36,7 +37,7 @@
             const currentForm = document.body.querySelector('.links__created-link');
 
             createButton.addEventListener('click', function () {
-                currentForm.classList.toggle('links__created-link--opened');
+                currentForm.classList.toggle('note--opened');
 
                 form.style.display = "none";
             });
@@ -48,5 +49,22 @@
                 });
             }
         }
+    }
+
+    if(payoutsButton) {
+        const form = document.body.querySelector('.payouts__form');
+        const note = document.body.querySelector('.payouts__note');
+
+        payoutsButton.addEventListener('click', function () {
+            note.classList.toggle('note--opened');
+            form.style.display = "none";
+        });
+
+        const payoutsCloseButton = document.body.querySelector('#payoutsCloseButton');
+
+        payoutsCloseButton.addEventListener('click', function () {
+            note.classList.toggle('note--opened');
+            form.style.display = "flex";
+        });
     }
 </script>

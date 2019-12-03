@@ -46,15 +46,9 @@
   }
 
   &__password {
-    display: none;
-
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    &--opened {
-      display: flex;
-    }
 
     .field__input {
       margin-top: r(15px);

@@ -106,7 +106,7 @@ body {
 
   &__block {
     margin-bottom: r(40px);
-    padding: r(20px);
+    padding: r($page-block-top);
 
     position: relative;
 
@@ -132,6 +132,10 @@ body {
 
   &--start {
     align-items: flex-start;
+  }
+
+  &--end {
+    align-items: flex-end;
   }
 
   & > * {
@@ -179,6 +183,21 @@ main {
 
 a {
   text-decoration: none;
+}
+
+.note {
+  padding-right: r(20px + $page-block-top);
+
+  display: none;
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include font-24();
+
+  &--opened {
+    display: flex;
+  }
 }
 
 .link {
