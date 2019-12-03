@@ -181,5 +181,7 @@ $media-icons-m: 540px;
 
     height: r($size);
     width: r($size);
+
+    background-size: cover;
   }
 }
