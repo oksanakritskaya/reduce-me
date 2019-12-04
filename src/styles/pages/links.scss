@@ -6,7 +6,7 @@
   }
 
   &__created-link {
-    .success {
+    .status {
       margin-bottom: r(22px);
     }
 
@@ -25,6 +25,14 @@
         width: 100%;
 
         border-bottom: 1px solid $color_blue;
+      }
+    }
+
+    .text-wrapper {
+      margin-bottom: r(13px);
+
+      .text {
+        margin-bottom: 0;
       }
     }
 

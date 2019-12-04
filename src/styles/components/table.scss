@@ -58,9 +58,9 @@
       text-align: right;
     }
 
-    .button--icon {
-      width: r(13px);
-      height: r(17px);
+    &-content {
+      display: flex;
+      align-items: center;
     }
   }
 }

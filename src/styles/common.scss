@@ -250,6 +250,11 @@ a {
   }
 }
 
+.text-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .delimiter {
   @include delimiter();
 }
@@ -271,6 +276,13 @@ a {
 
   &--round {
     border-radius: 50%;
+  }
+
+  &--copy {
+    padding-left: r(10px);
+
+    max-width: 23px;
+    max-height: 17px;
   }
 }
 .icon-pseudo {
@@ -389,12 +401,14 @@ a {
   }
 }
 
-.text-ellipsis {
+.ellipsis {
   display: inline-block;
-  max-width: calc(99% - 17px);
+  max-width: calc(99% - 23px);
 
   text-overflow: ellipsis;
   white-space: nowrap;
 
   overflow: hidden;
+
+  color: $color_blue;
 }
