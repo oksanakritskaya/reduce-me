@@ -21,6 +21,14 @@
   &__head {
     color: $color_blue;
     text-transform: uppercase;
+
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+    .lowercase {
+      text-transform: lowercase;
+    }
   }
 
   &__body {
@@ -56,6 +64,20 @@
 
     &--number {
       text-align: right;
+    }
+
+    &--with-icon {
+      padding-left: 17px + 8px;
+      position: relative;
+
+      .icon {
+        position: absolute;
+
+        top: 50%;
+        left: 0;
+
+        transform: translateY(-50%);
+      }
     }
 
     &-content {
