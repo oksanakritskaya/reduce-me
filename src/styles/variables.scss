@@ -120,14 +120,18 @@ $media-icons-m: 540px;
   line-height: r(14px);
 }
 
+@mixin item-hover {
+  text-decoration: none;
+  color: $color_blue;
+
+  background-color: $color_white;
+}
+
 @mixin with-hover {
   color: $color_white;
 
-  &:hover {
-    text-decoration: none;
-    color: $color_blue;
-
-    background-color: $color_white;
+  &:hover, &:active {
+    @include item-hover();
   }
 }
 
