@@ -21,14 +21,6 @@
   &__head {
     color: $color_blue;
     text-transform: uppercase;
-
-    .capitalize {
-      text-transform: capitalize;
-    }
-
-    .lowercase {
-      text-transform: lowercase;
-    }
   }
 
   &__body {

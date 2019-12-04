@@ -1,6 +1,14 @@
 @import "../variables";
 
 .rules {
+  .page__title {
+    margin-bottom: r(20px);
+  }
+
+  .page__sub-title {
+    margin-bottom: r(32px);
+  }
+
   &__sub-title {
     margin-bottom: r(17px);
 

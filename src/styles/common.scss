@@ -109,6 +109,14 @@ body {
     color: $color-blue;
   }
 
+  &__title + &__sub-title {
+    margin-top: 0;
+  }
+
+  &__sub-title + &__sub-title {
+    margin-top: 0;
+  }
+
   &__sub-title {
     margin: r(40px) 0;
 
@@ -419,4 +427,16 @@ a {
   overflow: hidden;
 
   color: $color_blue;
+}
+
+.capitalize {
+  text-transform: none !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
 }
