@@ -163,52 +163,62 @@
   }
 }
 
-
 .nav-toggle {
+  width: r(30px);
+  height: r(33px);
+  position: relative;
+
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
   cursor: pointer;
-  padding: r(10px) r(35px) r(16px) 0;
 
   background-color: transparent;
   border: none;
 
-  span,
-  span::before,
-  span::after {
-    height: r(3px);
-    width: r(30px);
-    background: $color_white;
-    position: absolute;
+  span {
     display: block;
-    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $color_white;
+    opacity: 1;
+    left: 0;
 
-    transition: all 500ms ease-in-out;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
   }
 
-  span::before {
-    top: r(-10px);
+  span:nth-child(1) {
+    top: 0;
   }
 
-  span::after {
-    bottom: r(-10px);
+  span:nth-child(2), span:nth-child(3) {
+    top: 50%;
+
+    transform: translateY(-50%);
   }
 
-  &.active {
-    span {
-      background-color: transparent;
-    }
-
-    span::before,
-    span::after {
-      top: 0;
-    }
-
-    span::before {
-      transform: rotate(45deg);
-    }
-
-    span::after {
-      transform: rotate(-45deg);
-    }
+  span:nth-child(4) {
+    top: calc(100% - 3px);
   }
 
+  &.active span:nth-child(1) {
+    top: calc(50% - 3px);
+    width: 0;
+    left: 50%;
+  }
+
+  &.active span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  &.active span:nth-child(4) {
+    top: calc(50% - 3px);
+    width: 0;
+    left: 50%;
+  }
 }
