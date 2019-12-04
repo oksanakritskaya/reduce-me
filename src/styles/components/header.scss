@@ -208,6 +208,11 @@
     left: 50%;
   }
 
+  &.active span:nth-child(2), &.active span:nth-child(3) {
+    width: r(45px);
+    left: r(-6px);
+  }
+
   &.active span:nth-child(2) {
     transform: rotate(45deg);
   }
