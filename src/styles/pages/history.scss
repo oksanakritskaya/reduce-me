@@ -1,0 +1,36 @@
+@import "../variables";
+
+.messages {
+  padding: r(28px) 0 r(20px);
+
+  &__message {
+
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+
+      max-width: 50%;
+    }
+
+    &--outgoing {
+      align-items: flex-start;
+
+      .message__wrap {
+        align-items: flex-start;
+      }
+    }
+
+    &--incoming {
+      align-items: flex-end;
+      .message__wrap {
+        align-items: flex-end;
+      }
+    }
+  }
+}

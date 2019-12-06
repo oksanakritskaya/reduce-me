@@ -302,6 +302,11 @@ a {
     max-width: 23px;
     max-height: 17px;
   }
+
+  &--arrow {
+    max-height: 14.5px;
+    max-width: 12px;
+  }
 }
 .icon-pseudo {
   @include icon-item(40px, 10px);

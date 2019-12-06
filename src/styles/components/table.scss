@@ -14,10 +14,6 @@
     }
   }
 
-  &__head, &__body {
-    padding: 0 r(20px);
-  }
-
   &__head {
     color: $color_blue;
     text-transform: uppercase;
@@ -75,6 +71,29 @@
     &-content {
       display: flex;
       align-items: center;
+
+      .button--icon {
+        margin-right: r(20px);
+      }
+    }
+  }
+
+
+  &--flex & {
+    &__row-messages {
+      &--opened {
+        margin: 0 r(-20px);
+        padding: 0 r(20px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      }
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__cell {
+      max-width: 100%;
     }
   }
 }

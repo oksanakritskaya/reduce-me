@@ -3,4 +3,95 @@
         <h2 class="page__title">История обращений</h2>
         <button class="button" type="button">Создать обращение</button>
     </div>
+
+    <div class="page__block">
+        <div class="table table--flex">
+            <div class="table__head">
+                <div class="table__row">
+                    <p class="table__cell capitalize">Тема</p>
+                    <p class="table__cell table__cell--number lowercase">статус</p>
+                </div>
+            </div>
+            <div class="table__body">
+                <div class="table__row">
+                    <div class="table__cell">
+                        <div class="table__cell-content">
+                            <button class="button button--icon">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
+                                </svg>
+                            </button>
+                            <span>не пришли деньги</span>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--number status status--process width-30%">на рассмотрении</div>
+                </div>
+                <div class="table__row-messages table__row-messages--opened">
+                    <div class="table__row">
+                        <div class="table__cell">
+                            <div class="table__cell-content">
+                                <button class="button button--icon">
+                                    <svg class="icon icon--arrow">
+                                        <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
+                                    </svg>
+                                </button>
+                                <span>Проблема: не создается ссылка</span>
+                            </div>
+                        </div>
+                        <div class="table__cell table__cell--number status status--success width-30%">есть новый ответ
+                        </div>
+                    </div>
+                    <div class="messages">
+                        <div class="messages__message message message--outgoing">
+                            <div class="message__wrap">
+                                <div class="message__user">
+                                    <img src="images/avatar.png" alt="avatar" class="icon">
+                                    <span>Seo-Login</span>
+                                </div>
+                                <p class="message__message">Добрый день, у меня проблема - не создается ссылка такая
+                                    то на такой то сайт ведущая, помогите решить.</p>
+                            </div>
+                        </div>
+                        <div class="messages__message message message--incoming">
+                            <div class="message__wrap">
+                                <div class="message__user">
+                                    <img src="images/avatar.png" alt="avatar" class="icon">
+                                    <span>Иван</span>
+                                </div>
+                                <p class="message__message">Здравствуйте, проверьте еще раз список ссылок - ваша
+                                    ссылка находится среди уже созданных</p>
+                            </div>
+                        </div>
+                        <div class="messages__response"></div>
+                    </div>
+                </div>
+                <div class="table__row">
+                    <div class="table__cell">
+                        <div class="table__cell-content">
+                            <button class="button button--icon">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
+                                </svg>
+                            </button>
+                            <span>У меня проблема</span>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--number status status--success width-30%">есть новый ответ</div>
+                </div>
+                <div class="table__row">
+                    <div class="table__cell">
+                        <div class="table__cell-content">
+                            <button class="button button--icon">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
+                                </svg>
+                            </button>
+                            <span>помогите</span>
+                        </div>
+                    </div>
+                    <div class="table__cell table__cell--number status status--process width-30%">на рассмотрении</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
