@@ -4,6 +4,8 @@
   padding: r(12px) r(25px);
   border: none;
 
+  height: r(48px);
+
   @include font-18();
   @include font-bold();
   color: $color_white;
@@ -49,7 +51,7 @@
   }
 
   &--cross {
-    .note & {
+    .note--cross & {
       position: absolute;
       top: r($page-block-top);
       right: r($page-block-top);

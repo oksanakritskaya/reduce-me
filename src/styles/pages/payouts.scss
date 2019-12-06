@@ -1,3 +1,13 @@
+@import "../variables";
+
 .payouts {
 
+  .note--cross {
+    padding-right: r(24px + 20px);
+  }
+
+  .button--cross {
+    top: r(24px);
+    right: r(24px);
+  }
 }

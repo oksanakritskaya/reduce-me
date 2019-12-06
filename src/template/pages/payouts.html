@@ -18,7 +18,7 @@
                         <button class="button button--white" type="submit">RUB</button>
                     </div>
                     <p class="page-block__item field field--column">
-                        <label class="field__label" for="sum">Введите сумму (доступно до 1000 RUB):</label>
+                        <label class="field__label" for="sum">Введите сумму (доступно до 1000 <b>RUB</b>):</label>
                         <input class="field__input width-100%" type="number" id="sum" placeholder="1000">
                     </p>
                 </div>
@@ -29,7 +29,7 @@
         </div>
     </form>
 
-    <div class="payouts__note note page__block">
+    <div class="payouts__note note note--cross page__block">
         <button id="payoutsCloseButton" type="button" class="button button--icon button--cross">
             <svg class="icon">
                 <use xlink:href="images/sprite.svg#cross"></use>
@@ -42,66 +42,66 @@
         <table class="table table--without-total">
             <thead class="table__head">
             <tr class="table__row">
-                <th class="table__cell">Дата</th>
-                <th class="table__cell">Кошелек</th>
-                <th class="table__cell table__cell--number">Сумма</th>
-                <th class="table__cell table__cell--number">Статус</th>
+                <th class="table__cell width-20%">Дата</th>
+                <th class="table__cell width-40%">Кошелек</th>
+                <th class="table__cell table__cell--number width-10%">Сумма</th>
+                <th class="table__cell table__cell--number width-30%">Статус</th>
             </tr>
             </thead>
             <tbody class="table__body">
             <tr class="table__row">
-                <td class="table__cell">12.12.2019</td>
-                <td class="table__cell">
+                <td class="table__cell width-20%">12.12.2019</td>
+                <td class="table__cell width-40%">
                     <img src="images/qiwi.png" alt="logo" class="icon">
                     <span>Qiwi</span>
                 </td>
-                <td class="table__cell table__cell--number">500 <b class="currency">rub</b></td>
-                <td class="table__cell table__cell--number status status--process">В обработке</td>
+                <td class="table__cell table__cell--number width-10%">500 <b class="currency">rub</b></td>
+                <td class="table__cell table__cell--number status status--process width-30%">В обработке</td>
             </tr>
             <tr class="table__row">
-                <td class="table__cell">02.12.2019</td>
-                <td class="table__cell">
+                <td class="table__cell width-20%">02.12.2019</td>
+                <td class="table__cell width-40%">
                     <img src="images/wm.png" alt="logo" class="icon">
                     <span>Webmoney</span>
                 </td>
-                <td class="table__cell table__cell--number">20 <b class="currency">usd</b></td>
-                <td class="table__cell table__cell--number status status--success">Завершена</td>
+                <td class="table__cell table__cell--number width-10%">20 <b class="currency">usd</b></td>
+                <td class="table__cell table__cell--number status status--success width-30%">Завершена</td>
             </tr>
             <tr class="table__row">
-                <td class="table__cell">22.11.2019</td>
-                <td class="table__cell">
+                <td class="table__cell width-20%">22.11.2019</td>
+                <td class="table__cell width-40%">
                     <img src="images/ym.png" alt="logo" class="icon">
                     <span>YandexMoney</span>
                 </td>
-                <td class="table__cell table__cell--number">500 <b class="currency">rub</b></td>
-                <td class="table__cell table__cell--number status status--error">Отклонена</td>
+                <td class="table__cell table__cell--number width-10%">500 <b class="currency">rub</b></td>
+                <td class="table__cell table__cell--number status status--error width-30%">Отклонена</td>
             </tr>
             <tr class="table__row">
-                <td class="table__cell">8.10.2019</td>
-                <td class="table__cell">
+                <td class="table__cell width-20%">8.10.2019</td>
+                <td class="table__cell width-40%">
                     <img src="images/wm.png" alt="logo" class="icon">
                     <span>Webmoney</span>
                 </td>
-                <td class="table__cell table__cell--number">100 <b class="currency">usd</b></td>
-                <td class="table__cell table__cell--number status status--success">Завершена</td>
+                <td class="table__cell table__cell--number width-10%">100 <b class="currency">usd</b></td>
+                <td class="table__cell table__cell--number status status--success width-30%">Завершена</td>
             </tr>
             <tr class="table__row">
-                <td class="table__cell">09.09.2019</td>
-                <td class="table__cell">
+                <td class="table__cell width-20%">09.09.2019</td>
+                <td class="table__cell width-40%">
                     <img src="images/wm.png" alt="logo" class="icon">
                     <span>Webmoney</span>
                 </td>
-                <td class="table__cell table__cell--number">150 <b class="currency">usd</b></td>
-                <td class="table__cell table__cell--number status status--success">Завершена</td>
+                <td class="table__cell table__cell--number width-10%">150 <b class="currency">usd</b></td>
+                <td class="table__cell table__cell--number status status--success width-30%">Завершена</td>
             </tr>
             <tr class="table__row">
-                <td class="table__cell">02.09.2019</td>
-                <td class="table__cell">
+                <td class="table__cell width-20%">02.09.2019</td>
+                <td class="table__cell width-40%">
                     <img src="images/wm.png" alt="logo" class="icon">
                     <span>Webmoney</span>
                 </td>
-                <td class="table__cell table__cell--number">80 <b class="currency">usd</b></td>
-                <td class="table__cell table__cell--number status status--success">Завершена</td>
+                <td class="table__cell table__cell--number width-10%">80 <b class="currency">usd</b></td>
+                <td class="table__cell table__cell--number status status--success width-30%">Завершена</td>
             </tr>
             </tbody>
         </table>

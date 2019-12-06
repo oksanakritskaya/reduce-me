@@ -210,8 +210,6 @@ a {
 }
 
 .note {
-  padding-right: r(20px + $page-block-top);
-
   display: none;
 
   flex-direction: column;
@@ -221,6 +219,10 @@ a {
 
   &--opened {
     display: flex;
+  }
+
+  &--cross {
+    padding-right: r(20px + $page-block-top);
   }
 }
 
