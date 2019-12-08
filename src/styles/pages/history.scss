@@ -1,5 +1,66 @@
 @import "../variables";
 
+.history {
+  .text {
+    display: none;
+
+    @include font-18();
+  }
+
+  &__form {
+    display: none;
+
+    overflow: hidden;
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      z-index: 1;
+
+      position: absolute;
+
+      background-repeat: no-repeat;
+    }
+
+    &:before {
+      top: r(116px);
+      left: r(-43px);
+
+      width: r(143px);
+      height: r(143px);
+
+      background-image: url('#{$url-sprite}#question-small');
+    }
+
+    &:after {
+      top: 0;
+      right: r(15px);
+
+      width: r(219px);
+      height: r(230px);
+
+      background-image: url('#{$url-sprite}#question');
+    }
+  }
+
+  &__theme {
+    margin-bottom: r(40px);
+    max-width: 85%;
+  }
+
+  .field__label {
+    margin-right: r(10px);
+
+    @include font-16();
+    text-transform: none;
+    color: $color_black;
+  }
+
+  &__actions {
+    margin-top: r(20px);
+  }
+}
+
 .messages {
   padding: r(28px) 0 r(20px);
 

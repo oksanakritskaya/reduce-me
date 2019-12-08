@@ -1,12 +1,16 @@
-<div class="page">
+<div class="history page">
     <div class="page__title-wrap page-block">
         <h2 class="page__title page-block__item">История обращений</h2>
         <div class="page-block__item">
-            <button class="button" type="button">Создать обращение</button>
+            <button id="historyButton" class="button" type="button">Создать обращение</button>
         </div>
     </div>
 
-    <div class="page__block">
+    <p class="history__note note page__block">Спасибо за обращение. Следите за ответами в истории обращений ниже</p>
+
+    <p class="text">Вы еще не создали ни одного обращения в службу поддержки</p>
+
+    <div class="history__main page__block">
         <div class="table table--flex">
             <div class="table__head">
                 <div class="table__row">
@@ -147,4 +151,29 @@
             </div>
         </div>
     </div>
+
+    <form class="history__form page__block page__block--column">
+        <p class="field field--column history__theme">
+            <label class="field__label" for="theme">Какая у вас проблема?</label>
+            <input class="field__input width-100%" type="text" id="theme" placeholder="Тема обращения">
+        </p>
+        <p class="field field--column">
+            <label class="field__label" for="descr">Опишите подробно:</label>
+            <textarea id="descr" class="field__input field__input--textarea width-100%" placeholder="Опишите вашу проблему"></textarea>
+        </p>
+        <div class="history__actions">
+            <div class="page-block">
+                <div class="field page-block__item">
+                    <label class="field__label">Есть скриншот?</label>
+                    <p>
+                        <input type="file" name="file" id="screen" class="inputfile"/>
+                        <label for="screen" class="field__input link">Выберите файл</label>
+                    </p>
+                </div>
+                <div class="page-block__item">
+                    <button id="historyCreateButton" class="button" type="button">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

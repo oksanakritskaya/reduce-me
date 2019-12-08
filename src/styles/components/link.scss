@@ -1,0 +1,43 @@
+@import "../variables";
+
+.link {
+  padding: 0;
+
+  position: relative;
+
+  @include font-16();
+  color: $color_blue;
+
+  flex-grow: 0;
+  height: auto;
+  min-width: 0;
+
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover:before {
+    content: '';
+
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+
+    width: 100%;
+
+    border-bottom: 1px solid $color_blue;
+  }
+}
+
+.link-hover {
+  @include link-hover();
+
+  &.delimiter {
+    &:before {
+      width: calc(100% - #{r(30px)});
+    }
+  }
+}
+
+.text + .link {
+  margin-left: r(8px);
+}

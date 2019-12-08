@@ -25,6 +25,8 @@
 }
 
 .field {
+  z-index: 2;
+
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -104,6 +106,16 @@
     min-width: 0;
     width: 100%;
     height: r(48px);
+  }
+
+  &--textarea {
+    padding: r(13px) r(12px);
+
+    height: r(190px);
+
+    @include font-24;
+    color: $color_black;
+    resize: none;
   }
 }
 

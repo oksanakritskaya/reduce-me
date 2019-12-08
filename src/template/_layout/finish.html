@@ -11,6 +11,8 @@
     const payoutsButton = document.body.querySelector('#payoutsButton');
     const messagesButton1 = document.body.querySelector('#messagesButton1');
     const messagesButton2 = document.body.querySelector('#messagesButton2');
+    const historyMain = document.body.querySelector('.history__main');
+    const historyButton = document.body.querySelector('#historyButton');
 
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
@@ -80,5 +82,25 @@
     messagesButton2.addEventListener('click', function () {
         const messages = document.body.querySelector('#messages2');
         messages.classList.toggle('table__row-messages--opened');
+    });
+
+    historyButton.addEventListener('click', function () {
+        const note = document.body.querySelector('.history__note');
+        if(note) {
+            note.style.display = "none";
+        }
+
+        const form = document.body.querySelector('.history__form');
+        const historyCreateButton = document.body.querySelector('#historyCreateButton');
+
+        historyMain.style.display = "none";
+        form.style.display = "flex";
+
+        historyCreateButton.addEventListener('click', function () {
+            form.style.display = "none";
+            note.style.display = "block";
+
+            historyMain.style.display = "flex";
+        });
     });
 </script>
