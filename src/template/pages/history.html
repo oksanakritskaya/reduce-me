@@ -13,24 +13,67 @@
                 </div>
             </div>
             <div class="table__body">
-                <div class="table__row">
-                    <div class="table__cell">
-                        <div class="table__cell-content">
-                            <button class="button button--icon">
-                                <svg class="icon icon--arrow">
-                                    <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
-                                </svg>
-                            </button>
-                            <span>не пришли деньги</span>
-                        </div>
-                    </div>
-                    <div class="table__cell table__cell--number status status--process width-30%">на рассмотрении</div>
-                </div>
-                <div class="table__row-messages table__row-messages--opened">
+                <div id="messages1" class="table__row-messages table__row-messages--archived">
                     <div class="table__row">
                         <div class="table__cell">
                             <div class="table__cell-content">
-                                <button class="button button--icon">
+                                <button id="messagesButton1" class="button button--icon">
+                                    <svg class="icon icon--arrow">
+                                        <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
+                                    </svg>
+                                </button>
+                                <span>не пришли деньги</span>
+                            </div>
+                        </div>
+                        <div class="table__cell table__cell--number status status--error width-30%">закрыт
+                        </div>
+                    </div>
+                    <div class="messages">
+                        <div class="messages__message message message--outgoing">
+                            <div class="message__wrap">
+                                <div class="message__user">
+                                    <img src="images/avatar.png" alt="avatar" class="icon">
+                                    <span>Seo-Login</span>
+                                </div>
+                                <p class="message__message">Добрый день, у меня проблема - не создается ссылка такая
+                                    то на такой то сайт ведущая, помогите решить.</p>
+                            </div>
+                        </div>
+                        <div class="messages__message message message--incoming">
+                            <div class="message__wrap">
+                                <div class="message__user">
+                                    <img src="images/avatar.png" alt="avatar" class="icon">
+                                    <span>Иван</span>
+                                </div>
+                                <p class="message__message">Здравствуйте, проверьте еще раз список ссылок - ваша
+                                    ссылка находится среди уже созданных</p>
+                            </div>
+                        </div>
+                        <div class="messages__message message message--outgoing">
+                            <div class="message__wrap">
+                                <div class="message__user">
+                                    <img src="images/avatar.png" alt="avatar" class="icon">
+                                    <span>Seo-Login</span>
+                                </div>
+                                <p class="message__message">Добрый день, у меня проблема - не создается ссылка такая
+                                    то на такой то сайт ведущая, помогите решить.</p>
+                            </div>
+                        </div>
+                        <div class="messages__response page-block">
+                            <p class="field page-block__item">
+                                <input class="field__input" type="text" placeholder="Опишите вашу проблему">
+                            </p>
+                            <div class="page-block__item">
+                                <button class="button" type="submit">Ответить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="messages2" class="table__row-messages">
+                    <div class="table__row">
+                        <div class="table__cell">
+                            <div class="table__cell-content">
+                                <button id="messagesButton2" class="button button--icon">
                                     <svg class="icon icon--arrow">
                                         <use xlink:href="images/sprite.svg#arrow-bl-right"></use>
                                     </svg>

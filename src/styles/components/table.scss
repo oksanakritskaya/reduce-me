@@ -81,10 +81,37 @@
 
   &--flex & {
     &__row-messages {
+      .messages {
+        display: none;
+      }
+
+      .icon--arrow {
+        transition: transform .5s ease-in-out;
+      }
+
       &--opened {
         margin: 0 r(-20px);
         padding: 0 r(20px);
+
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+        .icon--arrow {
+          transform: rotate(90deg);
+        }
+
+        .messages {
+          display: block;
+        }
+      }
+
+      &--opened.table__row-messages--archived {
+        padding-bottom: r(15px);
+      }
+
+      &--archived {
+        .messages__response {
+          display: none;
+        }
       }
     }
     &__row {

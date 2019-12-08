@@ -2,11 +2,15 @@
 </html>
 
 <script>
+    'use strict';
+
     const burger = document.body.querySelector('.nav-toggle');
     const changePassword = document.body.querySelector('#changePassword');
     const createLink = document.body.querySelector('#createLink');
     const form = document.body.querySelector('.links__create-link');
     const payoutsButton = document.body.querySelector('#payoutsButton');
+    const messagesButton1 = document.body.querySelector('#messagesButton1');
+    const messagesButton2 = document.body.querySelector('#messagesButton2');
 
     burger.addEventListener('click', function () {
         burger.classList.toggle('active');
@@ -67,4 +71,14 @@
             form.style.display = "flex";
         });
     }
+
+    messagesButton1.addEventListener('click', function () {
+        const messages = document.body.querySelector('#messages1');
+        messages.classList.toggle('table__row-messages--opened');
+    });
+
+    messagesButton2.addEventListener('click', function () {
+        const messages = document.body.querySelector('#messages2');
+        messages.classList.toggle('table__row-messages--opened');
+    });
 </script>
