@@ -10,27 +10,84 @@
   .message {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     &__wrap {
       display: flex;
       flex-direction: column;
-
-      max-width: 50%;
-    }
-
-    &--outgoing {
       align-items: flex-start;
 
-      .message__wrap {
-        align-items: flex-start;
+      max-width: 50%;
+
+      @media screen and (max-width: $media-xs) {
+        max-width: 60%;
+      }
+
+      @media screen and (max-width: $media-xxxs) {
+        max-width: 70%;
+      }
+
+      @media screen and (max-width: $media-xxxxs) {
+        max-width: 80%;
+      }
+    }
+
+    &__user {
+      margin-bottom: r(14px);
+
+      @include font-18();
+      color: $color_blue;
+    }
+
+    &__message {
+      padding: r(20px);
+
+      position: relative;
+
+      @include font-15();
+      color: $color_black;
+
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      background-color: #FFFFFF;
+
+      &:before {
+        content: '';
+
+        position: absolute;
+        bottom: 100%;
+        left: r(5px);
+
+        border-left: r(5px) solid transparent;
+        border-right: r(10px) solid transparent;
+        border-bottom: r(10px) solid #FFFFFF;
       }
     }
 
     &--incoming {
       align-items: flex-end;
+
       .message__wrap {
         align-items: flex-end;
       }
+
+      .message__message {
+        color: $color_white;
+        background-color: $color_blue;
+
+        &:before {
+          left: auto;
+          right: r(5px);
+
+          border-left: r(10px) solid transparent;
+          border-right: r(5px) solid transparent;
+          border-bottom: r(10px) solid $color_blue;
+        }
+      }
     }
+  }
+
+  &__response {
+    margin-top: r(20px);
   }
 }

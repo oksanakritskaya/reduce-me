@@ -113,6 +113,13 @@ $media-icons-m: 540px;
   line-height: r(19px);
 }
 
+@mixin font-15 {
+  font-family: $font;
+  font-weight: 400;
+  font-size: r(15px);
+  line-height: r(18px);
+}
+
 @mixin font-12 {
   font-family: $font;
   font-weight: 400;
