@@ -56,6 +56,13 @@
     color: $color_black;
   }
 
+  .field__input {
+    padding: 0 r(25px);
+    &--textarea {
+      padding: r(13px) r(25px);
+    }
+  }
+
   &__actions {
     margin-top: r(20px);
   }

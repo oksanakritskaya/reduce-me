@@ -38,6 +38,7 @@ body {
 
 .main-container {
   padding: r($header-height) 0 0 $nav-width;
+  transition: padding 0.5s;
 
   @media screen and (max-width: $media-xxs) {
     padding-left: $nav-width--l;

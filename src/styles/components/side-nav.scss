@@ -76,9 +76,17 @@
     padding-left: 12.62%;
     padding-right: 12.62%;
 
-    min-width: r(270px);
-
     justify-content: flex-start;
+
+    width: $nav-width * $nav-width-mult;
+
+    @media screen and (max-width: $media-xxs) {
+      width: $nav-width--l * $nav-width-mult;
+    }
+
+    @media screen and (max-width: $media-xxxs) {
+      width: 100%;
+    }
   }
 
   &:not(&--info) {
