@@ -10,4 +10,34 @@
     top: r(24px);
     right: r(24px);
   }
+
+  &__table {
+    min-width: 400px;
+  }
+
+  &__date {
+    width: 20%;
+  }
+
+  &__purse {
+    width: 40%;
+  }
+
+  &__sum {
+    width: 10%;
+  }
+
+  &__status {
+    width: 30%;
+  }
+
+  @media screen and (max-width: $media-xxxs) {
+    &__purse {
+      width: 30%;
+    }
+
+    &__sum {
+      width: 20%;
+    }
+  }
 }

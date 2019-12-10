@@ -52,6 +52,12 @@
     }
   }
 
+  &--copy {
+    width: r(13px);
+    height: r(17px);
+    margin-left: r(10px);
+  }
+
   &--cross {
     .note--cross & {
       position: absolute;

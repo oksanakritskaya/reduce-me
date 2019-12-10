@@ -1,17 +1,36 @@
 @import "../variables";
 
-.table {
-  margin: r(-20px) 0;
-  width: 100%;
-  min-width: r(300px);
+.table-container {
+  margin-top: -50px;
 
-  @include font-16();
-  color: $color_black;
+  .table-overflow {
+    padding-top: 50px;
+  }
+}
+
+.table-overflow {
+  overflow-x: auto;
+}
+
+.table {
+  padding: 0 r(20px);
+
+  background-color: $color_white;
+  box-shadow: 0 0 r(4px) rgba(0, 0, 0, 0.25);
+  border-radius: r(4px) r(4px) 0 0;
 
   &--without-total {
     .table__body .table__row:last-child{
       border-color: transparent;
     }
+  }
+
+  &__content {
+    width: 100%;
+    min-width: r(300px);
+
+    @include font-16();
+    color: $color_black;
   }
 
   &__head {
@@ -48,7 +67,7 @@
     padding: r(16px) r(6px);
 
     text-align: left;
-    max-width: 0;
+    //max-width: 0;
 
     &--number {
       text-align: right;
@@ -71,13 +90,8 @@
     &-content {
       display: flex;
       align-items: center;
-
-      .button--icon {
-        margin-right: r(20px);
-      }
     }
   }
-
 
   &--flex & {
     &__row-messages {

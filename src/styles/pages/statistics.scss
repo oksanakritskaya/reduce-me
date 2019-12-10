@@ -5,14 +5,8 @@
     flex-wrap: nowrap;
   }
 
-  .field {
-    flex-grow: 0;
-    @include font-16();
-
-    &__label {
-      flex-shrink: 0;
-      text-transform: uppercase;
-    }
+  &__table {
+    min-width: 730px;
   }
 
   .table {
@@ -20,6 +14,16 @@
       .tooltip:after, .tooltip__text {
         display: inline;
       }
+    }
+  }
+
+  .field {
+    flex-grow: 0;
+    @include font-16();
+
+    &__label {
+      flex-shrink: 0;
+      text-transform: uppercase;
     }
   }
 }

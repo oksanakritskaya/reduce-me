@@ -72,4 +72,34 @@
       margin-left: r(20px);
     }
   }
+
+  &__table {
+    min-width: 450px;
+  }
+
+  &__short-link {
+    width: 20%;
+  }
+
+  &__link {
+    width: 70%;
+  }
+
+  &__profit {
+    width: 10%;
+  }
+
+  @media screen and (max-width: $media-xxs) {
+    &__short-link {
+      width: 30%;
+    }
+
+    &__link {
+      width: 50%;
+    }
+
+    &__profit {
+      width: 20%;
+    }
+  }
 }

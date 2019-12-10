@@ -6,19 +6,21 @@
 
     <div class="referrals__note">
         <p class="text">Вы не привлекли еще ни одного реферала.</p>
-        <p class="text-wrapper">
+        <div class="text-wrapper page-block">
             <span class="text">Привлеките рефералов используя ссылку</span>
-            <a href="#" class="link">http://rdce.me/1234</a>
-            <button type="button" class="button button--icon">
-                <svg class="icon icon--copy">
-                    <use xlink:href="images/sprite.svg#copy"></use>
-                </svg>
-            </button>
-        </p>
+            <div class="page-block__item">
+                <a href="#" class="link">http://rdce.me/1234</a>
+                <button type="button" class="button button--icon button--copy">
+                    <svg class="icon icon--copy">
+                        <use xlink:href="images/sprite.svg#copy"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <div class="page__block">
-        <table class="table">
+    <div class="table">
+        <table class="table__content">
             <thead class="table__head">
             <tr class="table__row">
                 <th class="table__cell">Реферал</th>
@@ -79,7 +81,9 @@
             <tfoot class="table__foot">
             <tr class="table__row">
                 <td class="table__cell"></td>
-                <td class="table__cell table__cell--number"><b class="currency">Итого: </b>1280 <b class="currency">rub</b></td>
+                <td class="table__cell table__cell--number"><b class="currency">Итого: </b>1280 <b
+                        class="currency">rub</b>
+                </td>
             </tr>
             </tfoot>
         </table>

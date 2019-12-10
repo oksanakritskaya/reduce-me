@@ -6,4 +6,12 @@
 
     @include font-18();
   }
+
+  .page-block {
+    margin-left: r(-10px);
+
+    & > * {
+      padding-left: r(10px);
+    }
+  }
 }
