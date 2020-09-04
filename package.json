@@ -12,7 +12,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0",
     "merge-stream": "^2.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "streamqueue": "^1.1.2"
   },
   "scripts": {
