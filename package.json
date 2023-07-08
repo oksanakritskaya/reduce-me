@@ -9,10 +9,10 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-svg-sprite": "^1.5.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
     "merge-stream": "^2.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^9.0.0",
     "streamqueue": "^1.1.2"
   },
   "scripts": {
